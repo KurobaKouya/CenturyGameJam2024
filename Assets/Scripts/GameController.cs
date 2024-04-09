@@ -5,21 +5,34 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-    [Header("Managers")]
-    [SerializeField] private GameManager gameManager;
+    private GameManager gameManager;
+    private InputManager inputManager;
+
 
     private void Start()
     {
         // Persist through scenes
         DontDestroyOnLoad(this);
 
+        // Obtain references
+        gameManager = GetComponentInChildren<GameManager>();
+        inputManager = GetComponentInChildren<InputManager>();
 
-        // Initialize things
+
+        // Initialize
         // ...
-        if (gameManager != null) gameManager.Init();
+        gameManager.Init();
+        inputManager.Init();
 
 
         // Switch to Menu/Game Scene
         SceneManager.LoadSceneAsync((int)Globals.SceneIndex.Game, LoadSceneMode.Single);
+    }
+
+
+    private void Update()
+    {
+        gameManager.UpdateLoop();
+        inputManager.UpdateLoop();
     }
 }
