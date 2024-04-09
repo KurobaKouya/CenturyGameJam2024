@@ -8,5 +8,9 @@ public class Globals
     }
 
 
-    
+    public enum ItemIndex
+    {
+        None = -1,
+        KeyA = 0,
+    }
 }

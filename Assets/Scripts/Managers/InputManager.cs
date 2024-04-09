@@ -18,6 +18,8 @@ public class InputManager : Singleton<InputManager>
     private void UpdatePlayerInput()
     {
         player.movementDir = playerInput.Movement.Keyboard.ReadValue<Vector2>();
+
+        if (playerInput.UI.Interact.WasPressedThisFrame()) InputEvents.Instance.Interact();
     }
 
 
