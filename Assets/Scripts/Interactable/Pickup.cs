@@ -13,8 +13,9 @@ public class Pickup : Interactable
         {
             Debug.LogError("Pickup Interation Error: Item not defined.");
             return;
-        } 
+        }
 
-
+        // Send event
+        GameEvents.Instance.PickUpItem(item, this);
     }
 }
