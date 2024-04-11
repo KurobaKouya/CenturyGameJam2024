@@ -21,7 +21,8 @@ public class Player : MonoBehaviour
     public void UpdateLoop()
     {
         rb.velocity = new Vector3(movementDir.x * movementSpeed, 0, movementDir.y * movementSpeed);
-        if (movementDir != Vector2.zero) LookAt();
+        // if (movementDir != Vector2.zero) 
+        LookAtCursor();
     }
 
 
@@ -37,5 +38,19 @@ public class Player : MonoBehaviour
             rb.rotation = Quaternion.LookRotation(nextDirection, Vector3.up);
         else
             rb.angularVelocity = Vector3.zero;
+    }
+
+
+    private void LookAtCursor()
+    {
+        Ray cameraRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Plane groundPlane = new(Vector3.up, Vector3.zero);
+        if (groundPlane.Raycast(cameraRay, out float rayLength))
+        {
+            Vector3 pointToLook = cameraRay.GetPoint(rayLength);
+            Debug.DrawLine(cameraRay.origin, pointToLook, Color.yellow);
+
+            transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
+        }
     }
 }

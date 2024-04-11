@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager>
 {
     [Header("Variables")]
-    [SerializeField] private Player player = null;
+    public Player player = null;
 
 
     public void Init()

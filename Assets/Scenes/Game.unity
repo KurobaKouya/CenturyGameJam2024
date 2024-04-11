@@ -401,6 +401,7 @@ GameObject:
   - component: {fileID: 446332847}
   - component: {fileID: 446332846}
   - component: {fileID: 446332845}
+  - component: {fileID: 446332848}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -450,7 +451,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 1
+  orthographic: 0
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -482,6 +483,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &446332848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446332844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de4d91836babd814cb034c32ecd697ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1765435112}
+  currentVelocity: {x: 0, y: 0, z: 0}
+  smoothtime: 0.125
+  offset: {x: 0, y: 20, z: 0}
 --- !u!1 &725378183
 GameObject:
   m_ObjectHideFlags: 0
@@ -890,7 +907,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 29.023, y: 1, z: 20.336468}
+  m_LocalScale: {x: 48.427776, y: 1, z: 30.545374}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1277283942}
@@ -1341,6 +1358,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584714427}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1765435112 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 141290230875568430, guid: 2b6695801b0aecb4da67efa723c79a8e, type: 3}
+  m_PrefabInstance: {fileID: 4968767912058330759}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4968767912058330759
 PrefabInstance:
   m_ObjectHideFlags: 0
