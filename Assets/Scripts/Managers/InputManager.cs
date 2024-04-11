@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.LowLevel;
 
 public class InputManager : Singleton<InputManager>
 {
@@ -12,6 +13,7 @@ public class InputManager : Singleton<InputManager>
     public void UpdateLoop()
     {
         if (player) if (playerInputEnabled) UpdatePlayerInput(); else ResetPlayerInput();
+        if (Input.GetKeyDown(KeyCode.I)) UIEvents.Instance.ToggleInventory();
     }
 
 
