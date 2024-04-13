@@ -7,4 +7,8 @@ public class GlobalEvents : Singleton<GlobalEvents>
 
     public static event Action<bool> onEnablePlayerMovement = delegate{};
     public void EnablePlayerMovement(bool enable) => onEnablePlayerMovement?.Invoke(enable);
+
+
+    public static event Action<bool> onToggleCameraPeek = delegate{};
+    public void ToggleCameraPeek(bool enable) => onToggleCameraPeek?.Invoke(enable);
 }

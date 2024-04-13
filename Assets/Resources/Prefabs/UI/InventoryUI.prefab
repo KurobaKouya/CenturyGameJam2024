@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2101741418919661914}
   - component: {fileID: 7518070942691650346}
   m_Layer: 0
-  m_Name: Image (1)
+  m_Name: ItemSlot2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,6 +146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03c11e85ced44f8499e59455a2f226c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item1Image: {fileID: 0}
+  item2Image: {fileID: 0}
 --- !u!1 &6085484022223875011
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,7 +264,7 @@ GameObject:
   - component: {fileID: 8163131668023928148}
   - component: {fileID: 1359199911242784666}
   m_Layer: 0
-  m_Name: Image
+  m_Name: ItemSlot1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

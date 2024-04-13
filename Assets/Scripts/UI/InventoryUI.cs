@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class InventoryUI : UIBase
 {
-    private Image item1Image = null;
-    private Image item2Image = null;
+    [SerializeField] private Image item1Image = null;
+    [SerializeField] private Image item2Image = null;
 
 
     private void OnEnable()
