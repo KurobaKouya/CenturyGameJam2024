@@ -13,15 +13,30 @@ public class InputManager : Singleton<InputManager>
     public void UpdateLoop()
     {
         if (player) if (playerInputEnabled) UpdatePlayerInput(); else ResetPlayerInput();
-        if (Input.GetKeyDown(KeyCode.I)) UIEvents.Instance.ToggleInventory();
+        // if (Input.GetKeyDown(KeyCode.I)) UIEvents.Instance.ToggleInventory();
     }
 
 
     private void UpdatePlayerInput()
     {
-        player.movementDir = playerInput.Movement.Keyboard.ReadValue<Vector2>();
+        Vector2 movementDir = playerInput.Controls.Movement.ReadValue<Vector2>();  
+        player.movementDir = movementDir;
 
-        if (playerInput.UI.Interact.WasPressedThisFrame()) InputEvents.Instance.Interact();
+        // Enabling sprint
+        // ...
+        if (movementDir != Vector2.zero) if (playerInput.Controls.Sprint.WasPressedThisFrame()) InputEvents.Instance.ToggleSprint(true);
+        // Disabling sprint
+        // ...
+        if (playerInput.Controls.Sprint.WasReleasedThisFrame()) InputEvents.Instance.ToggleSprint(false);
+
+
+        // Attacking
+        if (playerInput.Controls.Attack.WasPressedThisFrame()) InputEvents.Instance.PlayerAttack();
+
+
+        // Picking up & dropping items
+        if (playerInput.Interactions.Interact.WasPressedThisFrame()) InputEvents.Instance.Interact();
+        if (playerInput.Interactions.Drop.WasPressedThisFrame())     InputEvents.Instance.DropItem();
     }
 
 

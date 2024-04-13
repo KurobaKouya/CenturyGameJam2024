@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
-    private GameData gameData = null;
+    [HideInInspector] public GameData gameData = null;
     [HideInInspector] public Player player { get; private set; }
     [HideInInspector] public bool flashlightToggled = false;
     [HideInInspector] public bool inUnknown = false;
