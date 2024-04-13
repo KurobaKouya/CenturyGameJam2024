@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class InventorySystem : MonoBehaviour
 {
-    [SerializeField] private Globals.ItemIndex firstItem = Globals.ItemIndex.None;
-    [SerializeField] private Globals.ItemIndex secondItem = Globals.ItemIndex.None;
+    [SerializeField] private Globals.ItemIndex itemInHand = Globals.ItemIndex.None;
 
 
     private void OnEnable()
@@ -23,7 +22,7 @@ public class InventorySystem : MonoBehaviour
     private void PickupItem(Globals.ItemIndex itemId, Interactable item)
     {
         // Check if item can be picked up
-        if (firstItem != Globals.ItemIndex.None && secondItem != Globals.ItemIndex.None)
+        if (itemInHand != Globals.ItemIndex.None)
         {
             Debug.Log("Inventory is full!");
             return;
@@ -31,15 +30,9 @@ public class InventorySystem : MonoBehaviour
         Debug.Log("Picked up " + itemId.ToString());
 
         // Add item to empty slot
-        if (firstItem == Globals.ItemIndex.None)
+        if (itemInHand == Globals.ItemIndex.None)
         {
-            firstItem = itemId;
-            item.DisableInteract();
-            Destroy(item.gameObject);
-        }
-        else if (secondItem == Globals.ItemIndex.None)
-        {
-            secondItem = itemId;
+            itemInHand = itemId;
             item.DisableInteract();
             Destroy(item.gameObject);
         }
