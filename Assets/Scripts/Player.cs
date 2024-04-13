@@ -83,6 +83,13 @@ public class Player : MonoBehaviour
     }
 
 
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("SafeZone")) GameManager.Instance.inUnknown = false;
+        else GameManager.Instance.inUnknown = true;
+    }
+
+
     private void LookAtCursor()
     {
         Ray cameraRay = CameraHandler.Instance.cam.ScreenPointToRay(Input.mousePosition);

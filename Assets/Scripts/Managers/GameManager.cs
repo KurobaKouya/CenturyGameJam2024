@@ -24,10 +24,10 @@ public class GameManager : Singleton<GameManager>
     private void UpdateFlashlight()
     {
         // Drain power when in unknown else regen
-        gameData.flashlightPower = inUnknown ? gameData.flashlightPower - Globals.flashlightDrain : gameData.flashlightPower + Globals.flashlightRegen;
+        gameData.flashlightPower = inUnknown ? gameData.flashlightPower - Globals.flashlightDrain * Time.deltaTime : gameData.flashlightPower + Globals.flashlightRegen * Time.deltaTime;
+        gameData.flashlightPower = Mathf.Clamp(gameData.flashlightPower, 0, 100);
 
-        flashlightToggled = gameData.flashlightPower >= 0 ? true : false;
-
+        flashlightToggled = gameData.flashlightPower > 0 ? true : false;
         // if (gameData.flashlightPower <= 0f)
         // {
         //     flashlightToggled = false;
