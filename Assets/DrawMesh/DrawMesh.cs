@@ -35,21 +35,25 @@ public class DrawMesh : MonoBehaviour {
 
     void Erase()
     {
-
+        Debug.Log("ite ");
 
         foreach (var item in meshes)
         {
 
             Vector3[] vertices = item.vertices;
-            Debug.Log("ite ");
+            Debug.Log("ite " + vertices.Length);
+            Debug.Log("ite " + item.colors.Length);
+            Color[] colors = item.colors;
             for (int i = 0; i < vertices.Length; i++)
             {
+  
                 Debug.Log("item: " + Vector3.Distance(vertices[i], map.GetMouseWorldPosition()));
                 if (Vector3.Distance(vertices[i], map.GetMouseWorldPosition()) <= lineThickness)
                 {
-                    item.colors[i] = Color.clear;
+                    colors[i] = Color.clear;
                 }
             }
+            item.colors = colors;
         }
     }
 
@@ -65,6 +69,7 @@ public class DrawMesh : MonoBehaviour {
                 // Mouse Pressed
                 GameObject meshObject = Instantiate(meshPrefab, transform);
                 currentMesh = new Mesh();
+                meshes.Add(currentMesh);
 
                 Vector3[] vertices = new Vector3[4];
                 Vector2[] uv = new Vector2[4];
@@ -155,6 +160,15 @@ public class DrawMesh : MonoBehaviour {
                     lastMousePosition = map.GetMouseWorldPosition();
                 }
             }
+        }
+        if (Input.GetMouseButtonUp(0))
+        {
+            Color[] colors = new Color[currentMesh.vertexCount];
+            for (int i = 0; i < colors.Length; i++)
+            {
+                colors[i] = Color.green;
+            }
+            currentMesh.colors = colors;
         }
     }
 

@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 
 public class MapManager : MonoBehaviour
 {
+    public Camera cam;
     public Vector2 minPos;
     public Vector2 maxPos;
 
@@ -18,12 +19,15 @@ public class MapManager : MonoBehaviour
 
     public bool CheckWithinMap()
     {
-        return !(GetMouseWorldPosition().x < minPos.x || GetMouseWorldPosition().x > maxPos.x || GetMouseWorldPosition().y < minPos.y || GetMouseWorldPosition().y > maxPos.y) && EventSystem.current.IsPointerOverGameObject();
+        return !(GetMouseWorldPosition().x < minPos.x || GetMouseWorldPosition().x > maxPos.x || GetMouseWorldPosition().y < minPos.y || GetMouseWorldPosition().y > maxPos.y) /*&& EventSystem.current.IsPointerOverGameObject()*/;
     }
 
     public Vector3 GetMouseWorldPosition()
     {
-        return Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        if (cam)
+            return cam.ScreenToWorldPoint(Input.mousePosition);
+        else
+            return Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
 }
