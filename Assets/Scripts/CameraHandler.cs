@@ -2,19 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraHandler : MonoBehaviour
+public class CameraHandler : Singleton<CameraHandler>
 {
     [Header("Variables")]
-    [SerializeField] private Camera mainCamera = null;
+    public Camera cam = null;
     [SerializeField] private GameObject target = null;
     [SerializeField] private Vector3 offset;
     [SerializeField] private bool peekEnabled = true;
     [SerializeField] private float maxPeekDistance = 20f;
+    [SerializeField] private float peekSmoothSpeed = 5f;
 
 
     private void Start()
     {
-        if (mainCamera == null) mainCamera = Camera.main;
+        if (cam == null) cam = Camera.main;
     }
 
 
@@ -33,12 +34,13 @@ public class CameraHandler : MonoBehaviour
             if (groundPlane.Raycast(cameraRay, out float rayLength))
             {
                 Vector3 pointToLook = cameraRay.GetPoint(rayLength);
-                pointToLook.x = Mathf.Clamp(pointToLook.x, -maxPeekDistance, maxPeekDistance);
-                pointToLook.z = Mathf.Clamp(pointToLook.z, -maxPeekDistance, maxPeekDistance);
+                pointToLook.x = Mathf.Clamp(pointToLook.x, -maxPeekDistance + transform.position.x, maxPeekDistance + transform.position.x);
+                pointToLook.z = Mathf.Clamp(pointToLook.z, -maxPeekDistance + transform.position.z, maxPeekDistance + transform.position.z);
                 pointToLook.y = offset.y;
-                mainCamera.transform.position = Vector3.Lerp(mainCamera.transform.position, pointToLook, 1f);
+                cam.transform.position = Vector3.Lerp(cam.transform.position, pointToLook, peekSmoothSpeed * Time.deltaTime);
             }
         }
+        else cam.transform.position = Vector3.zero;
     }
 
 

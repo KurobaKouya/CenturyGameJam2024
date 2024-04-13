@@ -43,7 +43,7 @@ public class Player : MonoBehaviour
 
     private void LookAtCursor()
     {
-        Ray cameraRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Ray cameraRay = CameraHandler.Instance.cam.ScreenPointToRay(Input.mousePosition);
         Plane groundPlane = new(Vector3.up, Vector3.zero);
         if (groundPlane.Raycast(cameraRay, out float rayLength))
         {
@@ -51,6 +51,9 @@ public class Player : MonoBehaviour
             Debug.DrawLine(cameraRay.origin, pointToLook, Color.yellow);
 
             transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
+            // transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(new(pointToLook.x, transform.position.y, pointToLook.z)), 10f * Time.deltaTime);
+
+            // transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(pointToLook), 0.5f * Time.deltaTime);
         }
     }
 }
