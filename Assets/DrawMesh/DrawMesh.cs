@@ -6,12 +6,12 @@ using UnityEngine;
 public class DrawMesh : MonoBehaviour {
 
 
-    [SerializeField] MapManager map;
+    [SerializeField] protected MapManager map;
 
-    [SerializeField] private Transform debugVisual1;
-    [SerializeField] private Transform debugVisual2;
 
-    [SerializeField] float lineThickness = 1f;
+    [SerializeField] protected float lineThickness = 1f;
+
+    [SerializeField] protected ObjectPoolScript fogManager;
 
 
     List<Mesh> meshes = new List<Mesh>();
@@ -19,7 +19,7 @@ public class DrawMesh : MonoBehaviour {
     bool erase = false;
 
     Mesh currentMesh;
-    [SerializeField] GameObject meshPrefab;
+    [SerializeField] protected GameObject meshPrefab;
     private Vector3 lastMousePosition;
 
     private void OnDrawGizmos()
@@ -58,7 +58,7 @@ public class DrawMesh : MonoBehaviour {
     }
 
 
-    private void Update() {
+    protected virtual void Update() {
         if (Input.GetMouseButtonDown(0)) {
             if (erase)
             {
@@ -67,7 +67,7 @@ public class DrawMesh : MonoBehaviour {
             else
             {
                 // Mouse Pressed
-                GameObject meshObject = Instantiate(meshPrefab, transform);
+                GameObject meshObject = Instantiate(meshPrefab, transform, true);
                 currentMesh = new Mesh();
                 meshes.Add(currentMesh);
 

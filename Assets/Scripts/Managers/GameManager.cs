@@ -11,6 +11,7 @@ public class GameManager : Singleton<GameManager>
     public void Init()
     {
         gameData ??= new();
+        player = FindObjectOfType<Player>();
     }
 
 
