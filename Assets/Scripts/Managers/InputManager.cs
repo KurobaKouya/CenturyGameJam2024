@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem.LowLevel;
 
-public class InputManager : Singleton<InputManager>
+public class InputManager : MonoBehaviour
 {
     private Player player;
     private PlayerInput playerInput;

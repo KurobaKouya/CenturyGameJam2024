@@ -7,6 +7,7 @@ public class GameController : MonoBehaviour
 {
     private GameManager gameManager;
     private InputManager inputManager;
+    private EnemyManager enemyManager;
 
 
     private void Start()
@@ -17,12 +18,15 @@ public class GameController : MonoBehaviour
         // Obtain references
         gameManager = GetComponentInChildren<GameManager>();
         inputManager = GetComponentInChildren<InputManager>();
+        enemyManager = GetComponentInChildren<EnemyManager>();
 
 
         // Initialize
         // ...
         gameManager.Init();
         inputManager.Init();
+        enemyManager.Init();
+
 
 
         // Switch to Menu/Game Scene
@@ -34,5 +38,6 @@ public class GameController : MonoBehaviour
     {
         gameManager.UpdateLoop();
         inputManager.UpdateLoop();
+        enemyManager.UpdateLoop();
     }
 }

@@ -17,6 +17,8 @@ public class Globals
 
 
     public static int monsterDmg = 20;
+    public static float monsterSightRange = 5f;
+    public static float monsterPatrolRange = 5f;
 
 
     public enum SceneIndex
