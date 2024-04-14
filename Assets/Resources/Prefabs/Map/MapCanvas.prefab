@@ -593,9 +593,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d5f5bb42515e0f458f96456eaa61d3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  map: {fileID: 2400310255543523748}
-  debugVisual1: {fileID: 0}
-  debugVisual2: {fileID: 0}
+  map: {fileID: 0}
   lineThickness: 0.1
   fogManager: {fileID: 0}
   meshPrefab: {fileID: 9087049296629389304, guid: bbcb38971a3b04249bdc691448509803, type: 3}
@@ -729,7 +727,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6658067297947986565}
-  - component: {fileID: 2400310255543523748}
   m_Layer: 7
   m_Name: Map
   m_TagString: Untagged
@@ -764,21 +761,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2400310255543523748
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3848620135641964690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 313c88fa9480a584da20d3362e6a0e5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  minPos: {x: -5, y: -5, z: 0}
-  maxPos: {x: 5, y: 5, z: 0}
 --- !u!1 &5678770443392006444
 GameObject:
   m_ObjectHideFlags: 0
@@ -1033,9 +1015,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10d7655222d30584da80f905e74fda32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  map: {fileID: 2400310255543523748}
-  lineThickness: 0.5
-  fogManager: {fileID: 0}
+  pool: {fileID: 0}
+  controller: {fileID: 0}
 --- !u!1 &7336048684407457455
 GameObject:
   m_ObjectHideFlags: 0
