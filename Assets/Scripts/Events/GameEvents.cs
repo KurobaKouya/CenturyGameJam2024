@@ -11,6 +11,10 @@ public class GameEvents : Singleton<GameEvents>
     public void DropItem(Globals.ItemIndex itemId) => onItemDropped?.Invoke(itemId);
 
 
+    public static event Action onRelicDropped = delegate{};
+    public void DropRelic() => onRelicDropped?.Invoke();
+
+
     public static event Action onPlayerDeath = delegate{};
     public void PlayerDeath() => onPlayerDeath?.Invoke();
 

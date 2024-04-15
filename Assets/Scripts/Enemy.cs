@@ -8,11 +8,13 @@ public class Enemy : MonoBehaviour
     [Header("Navigation Variables")]
     [SerializeField] private LayerMask playerLayerMask;
     [SerializeField] private LayerMask groundLayerMask;
+    [SerializeField] private LayerMask lightLayerMask;
 
     private NavMeshAgent agent;
     private Vector3 walkPoint;
     private bool walkPointSet;
     private bool playerInSightRange;
+    private bool inLight;
 
     [Header("Variables")]
     public bool isDead = false;
@@ -21,7 +23,6 @@ public class Enemy : MonoBehaviour
     {
         isDead = false;
         if (agent == null) agent = GetComponent<NavMeshAgent>();
-        StartCoroutine(DeathAfterSeconds());
     }
 
     public void UpdateLoop()
@@ -30,14 +31,14 @@ public class Enemy : MonoBehaviour
         playerInSightRange = Physics.CheckSphere(transform.position, Globals.monsterSightRange, playerLayerMask);
 
         if (!playerInSightRange) Patrol();
-        else Chase();
+        else if (!inLight) Chase();
     }
 
 
     private void Patrol()
     {
         if (!walkPointSet) SearchWalkPoint();
-        else agent.SetDestination(walkPoint);
+        else if (agent.isOnNavMesh) agent.SetDestination(walkPoint);
 
         Vector3 distanceToWalkPoint = transform.position - walkPoint;
 
@@ -48,14 +49,31 @@ public class Enemy : MonoBehaviour
 
     private void Chase()
     {
-        agent.SetDestination(GameManager.Instance.player.transform.position);
+        if (agent.isOnNavMesh) agent.SetDestination(GameManager.Instance.player.transform.position);
     }
 
 
     private void OnTriggerEnter(Collider other)
     {
-        // if (other.CompareTag("Player")) 
+        if (other.CompareTag("SafeZone")) 
+        {
+            inLight = true;
+            walkPoint = transform.position - agent.destination;
+            if (agent.isOnNavMesh) agent.SetDestination(transform.position - agent.destination);
+        }
+        else if (other.CompareTag("Player")) 
+        {
+            GameEvents.Instance.PlayerHit();
+            ObjectPoolManager.ReturnObjectToPool(gameObject);
+        }
     }
+
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("SafeZone")) StartCoroutine(LoseAggro());
+    }
+
 
     private void SearchWalkPoint()
     {
@@ -67,9 +85,9 @@ public class Enemy : MonoBehaviour
     }
 
 
-    IEnumerator DeathAfterSeconds()
+    IEnumerator LoseAggro()
     {
-        yield return new WaitForSeconds(5);
-        isDead = true;
+        yield return new WaitForSeconds(1f);
+        inLight = false;
     }
 }

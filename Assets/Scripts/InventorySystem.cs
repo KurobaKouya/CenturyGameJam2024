@@ -4,20 +4,19 @@ using UnityEngine;
 
 public class InventorySystem : MonoBehaviour
 {
-    private void Start()
-    {
-    }
-
-
     private void OnEnable()
     {
         GameEvents.onItemPickedUp += PickupItem;
+        GameEvents.onItemDropped += DropItem;
+        GameEvents.onRelicDropped += DropRelic;
     }
 
 
     private void OnDisable()
     {
         GameEvents.onItemPickedUp -= PickupItem;
+        GameEvents.onItemDropped -= DropItem;
+        GameEvents.onRelicDropped -= DropRelic;
     }
 
 
@@ -38,5 +37,17 @@ public class InventorySystem : MonoBehaviour
             item.DisableInteract();
             Destroy(item.gameObject);
         }
+    }
+
+
+    private void DropItem(Globals.ItemIndex itemId)
+    {
+        
+    }
+
+
+    private void DropRelic()
+    {
+
     }
 }

@@ -4,6 +4,7 @@ public class Globals
     public static int playerDmg = 10;
     public static float playerMovementSpeed = 10f;
     public static float sprintMovementSpeed = 20f;
+    public static float healthRegen = 5f;
 
 
     public  static float attackStaminaDrain = 15f;
@@ -17,8 +18,8 @@ public class Globals
 
 
     public static int monsterDmg = 20;
-    public static float monsterSightRange = 5f;
-    public static float monsterPatrolRange = 5f;
+    public static float monsterSightRange = 10f;
+    public static float monsterPatrolRange = 10f;
 
 
     public enum SceneIndex
