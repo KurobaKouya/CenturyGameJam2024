@@ -11,9 +11,17 @@ public class ItemSpawner : MonoBehaviour
     {
         if (itemToSpawn == Globals.ItemIndex.None) return;
 
+        StartCoroutine(SpawnItem());
+    }
+
+
+    IEnumerator SpawnItem()
+    {
+        yield return null;
+
         GameObject item = Resources.Load<GameObject>("Prefabs/Items/" + itemToSpawn.ToString());
         ObjectPoolManager.SpawnObject(item, transform.position, Quaternion.Euler(Vector3.zero), ObjectPoolManager.PoolType.Items);
 
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }

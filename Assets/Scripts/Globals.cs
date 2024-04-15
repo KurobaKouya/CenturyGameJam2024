@@ -34,5 +34,6 @@ public class Globals
     {
         None = -1,
         Axe = 0,
+        Relic = 1,
     }
 }

@@ -22,6 +22,23 @@ public class InventorySystem : MonoBehaviour
 
     private void PickupItem(Globals.ItemIndex itemId, Interactable item)
     {
+        if (itemId == Globals.ItemIndex.Relic)
+        {
+            if (GameManager.Instance.gameData.relicInInventory)
+            {
+                Debug.Log("Already carrying a relic!");
+                return;
+            }
+
+            Debug.Log("Picked up " + itemId.ToString());
+            // Add relic to Inventory
+            GameManager.Instance.gameData.relicInInventory = true;
+            item.DisableInteract();
+            ObjectPoolManager.ReturnObjectToPool(item.gameObject);
+            return;
+        }
+
+
         // Check if item can be picked up
         if (GameManager.Instance.gameData.itemInHand != Globals.ItemIndex.None)
         {
@@ -46,7 +63,7 @@ public class InventorySystem : MonoBehaviour
         if (GameManager.Instance.gameData.itemInHand == Globals.ItemIndex.None) return;
 
         Globals.ItemIndex itemId = GameManager.Instance.gameData.itemInHand;
-        Debug.Log("Dropped" + GameManager.Instance.gameData.itemInHand.ToString());
+        Debug.Log("Dropped " + GameManager.Instance.gameData.itemInHand.ToString());
 
         // Drop item on ground
         GameObject itemToSpawn = Resources.Load<GameObject>("Prefabs/Items/" + itemId.ToString());

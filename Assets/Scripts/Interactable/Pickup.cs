@@ -11,7 +11,7 @@ public class Pickup : Interactable
     {
         if (item == Globals.ItemIndex.None)
         {
-            Debug.LogError("Pickup Interation Error: Item not defined.");
+            Debug.LogError("Pickup Interaction Error: Item not defined.");
             return;
         }
 
