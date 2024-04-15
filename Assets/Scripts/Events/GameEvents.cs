@@ -7,10 +7,6 @@ public class GameEvents : Singleton<GameEvents>
     public void PickUpItem(Globals.ItemIndex itemId, Interactable item) => onItemPickedUp?.Invoke(itemId, item);
 
 
-    public static event Action<Globals.ItemIndex> onItemDropped = delegate{};
-    public void DropItem(Globals.ItemIndex itemId) => onItemDropped?.Invoke(itemId);
-
-
     public static event Action onRelicDropped = delegate{};
     public void DropRelic() => onRelicDropped?.Invoke();
 

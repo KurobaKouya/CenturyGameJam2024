@@ -7,7 +7,7 @@ public class InventorySystem : MonoBehaviour
     private void OnEnable()
     {
         GameEvents.onItemPickedUp += PickupItem;
-        GameEvents.onItemDropped += DropItem;
+        InputEvents.onDropItemPressed += DropItem;
         GameEvents.onRelicDropped += DropRelic;
     }
 
@@ -15,7 +15,7 @@ public class InventorySystem : MonoBehaviour
     private void OnDisable()
     {
         GameEvents.onItemPickedUp -= PickupItem;
-        GameEvents.onItemDropped -= DropItem;
+        InputEvents.onDropItemPressed -= DropItem;
         GameEvents.onRelicDropped -= DropRelic;
     }
 
@@ -35,14 +35,24 @@ public class InventorySystem : MonoBehaviour
         {
             GameManager.Instance.gameData.itemInHand = itemId;
             item.DisableInteract();
-            Destroy(item.gameObject);
+            ObjectPoolManager.ReturnObjectToPool(item.gameObject);
         }
     }
 
 
-    private void DropItem(Globals.ItemIndex itemId)
+    private void DropItem()
     {
-        
+        // Check if player has item in hand
+        if (GameManager.Instance.gameData.itemInHand == Globals.ItemIndex.None) return;
+
+        Globals.ItemIndex itemId = GameManager.Instance.gameData.itemInHand;
+        Debug.Log("Dropped" + GameManager.Instance.gameData.itemInHand.ToString());
+
+        // Drop item on ground
+        GameObject itemToSpawn = Resources.Load<GameObject>("Prefabs/Items/" + itemId.ToString());
+        GameManager.Instance.gameData.itemInHand = Globals.ItemIndex.None;
+        Transform player = GameManager.Instance.player.transform;
+        ObjectPoolManager.SpawnObject(itemToSpawn, player.position, player.rotation, ObjectPoolManager.PoolType.Items);
     }
 
 

@@ -7,11 +7,13 @@ public class ObjectPoolManager : MonoBehaviour
 {
     public static List<PooledObjectInfo> ObjectPools = new();
     private static GameObject objectPoolHolder;
+    private static GameObject itemPool;
     private static GameObject enemyPool;
 
     public enum PoolType
     {
         None,
+        Items,
         Enemy,
     }
     public static PoolType poolingtype;
@@ -25,6 +27,9 @@ public class ObjectPoolManager : MonoBehaviour
     private void SetupEmpties()
     {
         objectPoolHolder = new("Pooled Objects");
+
+        itemPool = new("Items");
+        itemPool.transform.SetParent(objectPoolHolder.transform);
 
         enemyPool = new("Enemies");
         enemyPool.transform.SetParent(objectPoolHolder.transform);
@@ -117,6 +122,8 @@ public class ObjectPoolManager : MonoBehaviour
         {
             case PoolType.Enemy: 
                 return enemyPool;
+            case PoolType.Items:
+                return itemPool;
             case PoolType.None:
                 return null;
             default: 
