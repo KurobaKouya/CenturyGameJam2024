@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 8984451566316963726}
   - component: {fileID: 2391829989841932308}
   - component: {fileID: 1077945388703268345}
+  - component: {fileID: 6853937157545705301}
   m_Layer: 8
   m_Name: MapCam
   m_TagString: Untagged
@@ -125,6 +126,18 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7294309145520297026}
   m_Enabled: 1
+--- !u!114 &6853937157545705301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7294309145520297026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e375286e3a33a90418c34346441bdc3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &437869565154928618
 PrefabInstance:
   m_ObjectHideFlags: 0

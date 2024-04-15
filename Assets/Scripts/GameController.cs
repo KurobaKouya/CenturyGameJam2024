@@ -10,7 +10,7 @@ public class GameController : MonoBehaviour
     private EnemyManager enemyManager;
 
 
-    private void Start()
+    private void Awake()
     {
         // Persist through scenes
         DontDestroyOnLoad(this);

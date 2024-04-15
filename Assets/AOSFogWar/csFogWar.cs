@@ -15,7 +15,7 @@ using System.Linq;                  // Enumerable
 using System.Collections.Generic;   // List
 using UnityEngine;                  // Monobehaviour
 using UnityEditor;                  // Handles
-
+using UnityEngine.Events;
 
 
 namespace FischlWorks_FogWar
@@ -258,6 +258,8 @@ namespace FischlWorks_FogWar
 
         public LevelData levelData { get; private set; } = new LevelData();
 
+        [HideInInspector] public UnityEvent onUpdateField;
+
         // The primitive plane which will act as a mesh for rendering the fog with
         private GameObject fogPlane = null;
 
@@ -459,6 +461,8 @@ namespace FischlWorks_FogWar
         {
             shadowcaster.ResetTileVisibility();
 
+            onUpdateField.Invoke();
+
             foreach (FogRevealer fogRevealer in fogRevealers)
             {
                 fogRevealer.GetCurrentLevelCoordinates(this);
@@ -471,7 +475,16 @@ namespace FischlWorks_FogWar
             UpdateFogPlaneTextureTarget();
         }
 
+        public Vector2Int GetLevelCoordinates(Vector3 levelCoordinates)
+        {
+            return new Vector2Int(GetUnitX(levelCoordinates.x), GetUnitY(levelCoordinates.z));
+        }
 
+        public void CreateSightFromPos(Vector2Int levelCoordinates, float size)
+        {
+            
+            shadowcaster.ProcessLevelData(levelCoordinates, Mathf.RoundToInt(size / unitScale));
+        }
 
         // Doing shader business on the script, if we pull this out as a shader pass, same operations must be repeated
         private void UpdateFogPlaneTextureBuffer()

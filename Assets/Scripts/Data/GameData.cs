@@ -7,6 +7,7 @@ public class GameData
     public float flashlightPower = 100f;
     public Globals.ItemIndex itemInHand = Globals.ItemIndex.None;
     public bool relicInInventory = false;
+    public float inkAmount = 0f;
 
 
     // public GameData()

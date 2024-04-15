@@ -9,6 +9,9 @@ public class MiniMapController : MonoBehaviour, IPointerClickHandler, IPointerMo
 {
     public Camera miniMapCam;
     public UnityEvent<Vector3> onClickOnMinimap;
+    public float distanceUpdate = 10;
+
+    public Vector3 prevLocation;
     public void OnPointerMove(PointerEventData eventData)
     {
         if (Input.GetMouseButton(0))
@@ -42,8 +45,12 @@ public class MiniMapController : MonoBehaviour, IPointerClickHandler, IPointerMo
 
 
             curosr = new Vector2(calX, calY);
+            if (prevLocation  != null && Vector2.Distance(prevLocation, curosr) <= distanceUpdate)
+            {
+                CastRayToWorld(curosr);
+            }
 
-            CastRayToWorld(curosr);
+            prevLocation = curosr;
         }
     }
     private void CastRayToWorld(Vector2 vec)
