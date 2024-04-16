@@ -76,31 +76,31 @@ public class EnemyManager : Singleton<EnemyManager>
             // North
             case 0:
                 posZ = Globals.minSpawnDistance + playerPos.z;
-                posX = Random.Range(-Globals.spawnVariance, Globals.spawnVariance);
+                posX = Random.Range(-Globals.spawnVariance, Globals.spawnVariance) + playerPos.x;
                 break;
 
             // South
             case 1:
                 posZ = -Globals.minSpawnDistance + playerPos.z;
-                posX = Random.Range(-Globals.spawnVariance, Globals.spawnVariance);
+                posX = Random.Range(-Globals.spawnVariance, Globals.spawnVariance) + playerPos.x;
                 break;
 
             // East
             case 2:
                 posX = Globals.minSpawnDistance + playerPos.x;
-                posZ = Random.Range(-Globals.spawnVariance, Globals.spawnVariance);
+                posZ = Random.Range(-Globals.spawnVariance, Globals.spawnVariance) + playerPos.z;
                 break;
 
             // West
             case 3:
                 posX = -Globals.minSpawnDistance + playerPos.x;
-                posZ = Random.Range(-Globals.spawnVariance, Globals.spawnVariance);
+                posZ = Random.Range(-Globals.spawnVariance, Globals.spawnVariance) + playerPos.z;
                 break;
 
             // North
             default:
                 posZ = Globals.minSpawnDistance + playerPos.z;
-                posX = Random.Range(-Globals.spawnVariance, Globals.spawnVariance);
+                posX = Random.Range(-Globals.spawnVariance, Globals.spawnVariance) + playerPos.x;
                 break;
         }
 

@@ -28,7 +28,7 @@ public class Enemy : MonoBehaviour
 
     public void UpdateLoop()
     {
-        if (health <= 0) ObjectPoolManager.ReturnObjectToPool(gameObject);
+        if (health <= 0) isDead = true;
 
 
         // Check for sight range
