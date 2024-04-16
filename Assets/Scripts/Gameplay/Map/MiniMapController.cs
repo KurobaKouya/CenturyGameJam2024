@@ -5,10 +5,11 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.Events;
 
-public class MiniMapController : MonoBehaviour, IPointerClickHandler, IPointerMoveHandler
+public class MiniMapController : MonoBehaviour, IPointerClickHandler, IPointerMoveHandler, IPointerUpHandler
 {
     public Camera miniMapCam;
     public UnityEvent<Vector3> onClickOnMinimap;
+    public UnityEvent<Vector3> onPointerUpMinimap;
     public float distanceUpdate = 10;
 
     public Vector3 prevLocation;
@@ -24,6 +25,12 @@ public class MiniMapController : MonoBehaviour, IPointerClickHandler, IPointerMo
         
 
         MinimapToWorld(eventData);
+    }
+    public void OnPointerUp(PointerEventData eventData)
+    {
+
+
+        onPointerUpMinimap?.Invoke(eventData.position); 
     }
 
     void MinimapToWorld(PointerEventData eventData)

@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour
 
     [Header("Variables")]
     public int health = Globals.monsterHealth;
+    public int inkAmount = 10;
     public bool isDead = false;
 
     public void Init()
@@ -28,7 +29,7 @@ public class Enemy : MonoBehaviour
 
     public void UpdateLoop()
     {
-        if (health <= 0) isDead = true;
+        if (health <= 0) Die();
 
 
         // Check for sight range
@@ -93,5 +94,11 @@ public class Enemy : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         inLight = false;
+    }
+
+    void Die()
+    {
+        isDead = true;
+        GameManager.Instance.gameData.inkAmount += inkAmount;
     }
 }

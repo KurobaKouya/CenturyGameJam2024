@@ -44,6 +44,10 @@ public class GameManager : Singleton<GameManager>
         // ...
         gameData.playerHealth += Globals.healthRegen * Time.deltaTime;
         gameData.playerHealth = Mathf.Clamp(gameData.playerHealth, 0, 100);
+
+        //Ink
+        //
+        gameData.inkAmount = Mathf.Clamp(gameData.inkAmount, 0, Globals.maxInk);
     }
 
 

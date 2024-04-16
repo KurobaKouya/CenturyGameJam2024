@@ -16,6 +16,9 @@ public class Globals
     public static float flashlightDrain = 5.0f;
     public static float flashlightDrainOnHit = 20f;
 
+    public static float maxInk = 100;
+    public static float inkPerDistance = 0.5f;
+
 
     public static int monsterHealth = 20;
     public static int monsterDmg = 20;

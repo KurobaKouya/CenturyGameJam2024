@@ -33,10 +33,13 @@ public class InputManager : MonoBehaviour
         // Attacking
         if (playerInput.Controls.Attack.WasPressedThisFrame()) InputEvents.Instance.PlayerAttack();
 
+        if (playerInput.Controls.ToggleMap.WasPressedThisFrame()) UIEvents.Instance.ToggleMap();
+
 
         // Picking up & dropping items
         if (playerInput.Interactions.Interact.WasPressedThisFrame()) InputEvents.Instance.Interact();
         if (playerInput.Interactions.Drop.WasPressedThisFrame())     InputEvents.Instance.DropItem();
+
     }
 
 

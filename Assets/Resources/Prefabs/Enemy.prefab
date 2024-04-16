@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7536316938249832364}
   - component: {fileID: 1864843743675539673}
   - component: {fileID: 186893232053236969}
+  - component: {fileID: 4460518834473080370}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -55,6 +56,11 @@ MonoBehaviour:
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 128
+  lightLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 20
+  inkAmount: 10
   isDead: 0
 --- !u!33 &955022970102203358
 MeshFilter:
@@ -164,10 +170,10 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 200
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -176,3 +182,18 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &4460518834473080370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8807826560730098131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 985add12ee4836e40b7241671b1d892c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fogWar: {fileID: 0}
+  visibility: 0
+  additionalRadius: 0

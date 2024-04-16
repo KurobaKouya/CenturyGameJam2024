@@ -37,9 +37,9 @@ public class MinimapToFog : MonoBehaviour
     [SerializeField] float timeBeforeDecay = 1;
     [SerializeField] float decayTime = 10;
     [SerializeField] float updateTime;
-    [SerializeField] float inkPerDistance = 0.5f;
     [SerializeField] ObjectPoolScript objectPool;
 
+    private bool isDrawing = false;
 
     List<NoFogPosition> noFog = new List<NoFogPosition>();
     // Start is called before the first frame update
@@ -47,6 +47,7 @@ public class MinimapToFog : MonoBehaviour
     {
         controller.onClickOnMinimap.AddListener(OnClickMap);
         fogWar.onUpdateField.AddListener(OnUpdate);
+        controller.onPointerUpMinimap.AddListener(OnPointerUpMap);
         GameManager.Instance.gameData.inkAmount = 100f;
     }
 
@@ -56,12 +57,22 @@ public class MinimapToFog : MonoBehaviour
         {
             NoFogPosition pos = new NoFogPosition(position, startSize, timeBeforeDecay, decayTime, objectPool.InstantiateObject(new Vector3(position.x, 0, position.z)));
             pos.levelCoordinates = fogWar.GetLevelCoordinates(pos.position);
-            pos.gameObject.transform.localScale = new Vector3(pos.currentSize, pos.currentSize, pos.currentSize) * inkPerDistance;
+            pos.gameObject.transform.localScale = new Vector3(pos.currentSize, pos.currentSize, pos.currentSize);
             noFog.Add(pos);
-            GameManager.Instance.gameData.inkAmount -= Vector2.Distance(position, controller.prevLocation);
+            GameManager.Instance.gameData.inkAmount -= Vector2.Distance(position, controller.prevLocation) * Globals.inkPerDistance;
+            isDrawing = true;
+        }
+        else
+        {
+            isDrawing = false;
         }
 
     }
+    void OnPointerUpMap(Vector3 vector)
+    {
+        isDrawing = false;
+    }
+    
     void OnUpdate()
     {
         for (int i = noFog.Count - 1; i >= 0; i--)
