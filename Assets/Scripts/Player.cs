@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     public float stamina = 100f;
     private bool canRegenStamina = true;
     private bool canAttack = true;
+    [SerializeField] private AttackHitBox attackHitBox = null;
 
 
     // Player Setup + Event subscribing
@@ -73,11 +74,17 @@ public class Player : MonoBehaviour
         canAttack = false;
         canRegenStamina = false;
         stamina -= Globals.attackStaminaDrain;
+
         // Do attack
         // ...
+        if (attackHitBox) attackHitBox.gameObject.SetActive(true);
+        attackHitBox.damage = Globals.playerDmg;
+        
 
 
         yield return new WaitForSeconds(1);
+        
+        if (attackHitBox) attackHitBox.gameObject.SetActive(false);
         canAttack = true;
         canRegenStamina = true;
     }

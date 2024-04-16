@@ -47,6 +47,12 @@ public class GameManager : Singleton<GameManager>
     }
 
 
+    private void GameWin()
+    {
+        Debug.Log("YOU WIN");
+    }
+
+
     private void PlayerHit()
     {
         if (gameData.flashlightPower >= Globals.flashlightDrainOnHit)
@@ -85,6 +91,7 @@ public class GameManager : Singleton<GameManager>
         // InputEvents.onToggleFlashlight += () => flashlightToggled = !flashlightToggled;
         GameEvents.onEnterUnknown += () => inUnknown = true;
         GameEvents.onExitUnknown += () => inUnknown = false;
+        GameEvents.onAllRelicsCollected += GameWin;
     }
 
 
@@ -95,6 +102,7 @@ public class GameManager : Singleton<GameManager>
         // InputEvents.onToggleFlashlight -= () => flashlightToggled = !flashlightToggled;
         GameEvents.onEnterUnknown -= () => inUnknown = true;
         GameEvents.onExitUnknown -= () => inUnknown = false;
+        GameEvents.onAllRelicsCollected -= GameWin;
     }
     #endregion
 }

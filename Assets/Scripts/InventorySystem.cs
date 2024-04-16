@@ -75,6 +75,14 @@ public class InventorySystem : MonoBehaviour
 
     private void DropRelic()
     {
+        // Check if player has relic
+        if (!GameManager.Instance.gameData.relicInInventory) return;
 
+        Debug.Log("Dropped Relic");
+        // Drop relic on ground
+        GameObject itemToSpawn = Resources.Load<GameObject>("Prefabs/Items/Relic");
+        GameManager.Instance.gameData.relicInInventory = false;
+        Transform player = GameManager.Instance.player.transform;
+        ObjectPoolManager.SpawnObject(itemToSpawn, player.position, player.rotation, ObjectPoolManager.PoolType.Items);
     }
 }

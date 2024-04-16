@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour
     private bool inLight;
 
     [Header("Variables")]
+    public int health = Globals.monsterHealth;
     public bool isDead = false;
 
     public void Init()
@@ -27,6 +28,9 @@ public class Enemy : MonoBehaviour
 
     public void UpdateLoop()
     {
+        if (health <= 0) ObjectPoolManager.ReturnObjectToPool(gameObject);
+
+
         // Check for sight range
         playerInSightRange = Physics.CheckSphere(transform.position, Globals.monsterSightRange, playerLayerMask);
 

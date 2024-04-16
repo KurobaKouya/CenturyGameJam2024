@@ -26,4 +26,7 @@ public class GameEvents : Singleton<GameEvents>
     public static event Action onExitUnknown = delegate{};
     public void ExitUnknown() => onExitUnknown?.Invoke();
 
+
+    public static event Action onAllRelicsCollected = delegate{};
+    public void AllRelicsCollected() => onAllRelicsCollected?.Invoke();
 }

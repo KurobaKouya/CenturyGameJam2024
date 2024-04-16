@@ -17,9 +17,14 @@ public class Globals
     public static float flashlightDrainOnHit = 20f;
 
 
+    public static int monsterHealth = 20;
     public static int monsterDmg = 20;
     public static float monsterSightRange = 10f;
     public static float monsterPatrolRange = 10f;
+    public static float maxDistanceFromPlayer = 30f;
+    public static float minSpawnDistance = 20f;
+    public static float spawnVariance = 20f;
+    public static int maxSpawnCount = 15;
 
 
     public enum SceneIndex
