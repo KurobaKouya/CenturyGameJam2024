@@ -10,7 +10,9 @@ public class AttackHitBox : MonoBehaviour
         switch (other.tag)
         {
             case "Enemy":
-                other.GetComponent<Enemy>().health -= damage;
+                Enemy en = other.GetComponent<Enemy>();
+                en.health -= damage;
+                en.TakeDamage();
                 break;
         }
     }

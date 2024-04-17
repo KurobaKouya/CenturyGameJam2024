@@ -5,11 +5,9 @@ using UnityEngine.Pool;
 
 public class EnemyManager : Singleton<EnemyManager>
 {
-    private List<Enemy> enemyList = new();
-    private GameObject enemyPrefab;
-    private int enemyCount = 0;
+    [SerializeField] private List<Enemy> enemyList = new();
+    [SerializeField] private GameObject enemyPrefab;
     
-
 
     public void Init()
     {
@@ -24,10 +22,10 @@ public class EnemyManager : Singleton<EnemyManager>
 
         foreach (Enemy en in enemyList) 
         {
+            if (en == null) break;
             if (en.isDead)
             {
                 enemyList.Remove(en);
-                enemyCount -= 1;
                 ObjectPoolManager.ReturnObjectToPool(en.gameObject);
                 break;
             }
@@ -42,11 +40,11 @@ public class EnemyManager : Singleton<EnemyManager>
 
     private void SpawnEnemies()
     {
-        if (enemyCount < Globals.maxSpawnCount) SpawnEnemy();
+        if (enemyList.Count < Globals.maxSpawnCount) SpawnEnemy();
     }
 
 
-    private Enemy SpawnEnemy()
+    private void SpawnEnemy()
     {
         Vector3 spawnPosition = FindSpawnPosition();
         Quaternion SpawnRotation = Quaternion.Euler(Vector3.zero);
@@ -54,17 +52,12 @@ public class EnemyManager : Singleton<EnemyManager>
         Enemy enemy = enemyObj.GetComponent<Enemy>();
         enemy.Init();
         enemyList.Add(enemy);
-        enemyCount += 1;
-        return enemy;
     }
 
 
     private Vector3 FindSpawnPosition()
     {
         Vector3 playerPos = GameManager.Instance.player.transform.position;
-        // float randomX = Random.Range(-Globals.spawnVariance, Globals.spawnVariance) + Random.Range(-1, 1) * Globals.minSpawnDistance;
-        // float randomZ = Random.Range(-Globals.spawnVariance, Globals.spawnVariance) + Random.Range(-1, 1) * Globals.minSpawnDistance;
-
 
         // NSEW
         float posX = 0;

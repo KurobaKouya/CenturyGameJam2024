@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour
     private bool inLight;
 
     [Header("Variables")]
+    public Transform mesh;
     public int health = Globals.monsterHealth;
     public int inkAmount = 10;
     public bool isDead = false;
@@ -25,11 +26,12 @@ public class Enemy : MonoBehaviour
     {
         isDead = false;
         if (agent == null) agent = GetComponent<NavMeshAgent>();
+        // StartCoroutine(CheckIfInSafeZone());
     }
 
     public void UpdateLoop()
     {
-        if (health <= 0) Die();
+        if (health <= 0) StartCoroutine(Die());
 
 
         // Check for sight range
@@ -66,17 +68,30 @@ public class Enemy : MonoBehaviour
             walkPoint = transform.position - agent.destination;
             if (agent.isOnNavMesh) agent.SetDestination(transform.position - agent.destination);
         }
-        else if (other.CompareTag("Player")) 
+        else if (other.CompareTag("Player") && health > 0) 
         {
             GameEvents.Instance.PlayerHit();
-            ObjectPoolManager.ReturnObjectToPool(gameObject);
+            isDead = true;
         }
     }
 
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("SafeZone")) StartCoroutine(LoseAggro());
+        if (other.CompareTag("SafeZone")) 
+        {
+            if (inLight) return;
+            StartCoroutine(LoseAggro());
+        }
+    }
+
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("SafeZone"))
+            inLight = true;
+        else
+            inLight = false;
     }
 
 
@@ -96,9 +111,30 @@ public class Enemy : MonoBehaviour
         inLight = false;
     }
 
-    void Die()
+
+    public void TakeDamage() => StartCoroutine(TakeDamageCoroutine());
+    IEnumerator TakeDamageCoroutine()
     {
-        isDead = true;
+        agent.speed = 1;
+        yield return new WaitForSeconds(1);
+
+        // Revert speed to normal
+        agent.speed = 2;
+    }
+
+
+    // IEnumerator CheckIfInSafeZone()
+    // {
+    //     yield return new WaitForSeconds(0.5f);
+    //     isDead = inLight;
+    // }
+
+
+    IEnumerator Die()
+    {
         GameManager.Instance.gameData.inkAmount += inkAmount;
+        mesh.position = new(mesh.position.x, mesh.position.y - 5 * Time.deltaTime, mesh.position.z);
+        yield return new WaitForSeconds(0.5f);
+        isDead = true;
     }
 }
