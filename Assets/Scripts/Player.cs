@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
     private bool canAttack = true;
     [SerializeField] private AttackHitBox attackHitBox = null;
 
+    public Animator animator;
+
 
     // Player Setup + Event subscribing
     private void OnEnable()
@@ -77,14 +79,13 @@ public class Player : MonoBehaviour
 
         // Do attack
         // ...
-        if (attackHitBox) attackHitBox.gameObject.SetActive(true);
+        //if (attackHitBox) attackHitBox.gameObject.SetActive(true);
+        animator.SetTrigger("Attack");
         attackHitBox.damage = Globals.playerDmg;
-        
-
 
         yield return new WaitForSeconds(1);
         
-        if (attackHitBox) attackHitBox.gameObject.SetActive(false);
+        //if (attackHitBox) attackHitBox.gameObject.SetActive(false);
         canAttack = true;
         canRegenStamina = true;
     }
