@@ -25,7 +25,12 @@ public class Enemy : MonoBehaviour
     public void Init()
     {
         isDead = false;
+        StopAllCoroutines();
+        mesh.localPosition = Vector3.zero;
+        health = Globals.monsterHealth;
         if (agent == null) agent = GetComponent<NavMeshAgent>();
+        agent.speed = 3;
+        walkPointSet = false;
         // StartCoroutine(CheckIfInSafeZone());
     }
 
@@ -64,9 +69,8 @@ public class Enemy : MonoBehaviour
     {
         if (other.CompareTag("SafeZone")) 
         {
-            inLight = true;
             walkPoint = transform.position - agent.destination;
-            if (agent.isOnNavMesh) agent.SetDestination(transform.position - agent.destination);
+            if (agent.isOnNavMesh) agent.SetDestination(walkPoint);
         }
         else if (other.CompareTag("Player") && health > 0) 
         {
@@ -91,7 +95,7 @@ public class Enemy : MonoBehaviour
         if (other.CompareTag("SafeZone"))
             inLight = true;
         else
-            inLight = false;
+            StartCoroutine(LoseAggro());
     }
 
 
@@ -107,7 +111,7 @@ public class Enemy : MonoBehaviour
 
     IEnumerator LoseAggro()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         inLight = false;
     }
 
@@ -115,11 +119,11 @@ public class Enemy : MonoBehaviour
     public void TakeDamage() => StartCoroutine(TakeDamageCoroutine());
     IEnumerator TakeDamageCoroutine()
     {
-        agent.speed = 1;
+        agent.speed = 2;
         yield return new WaitForSeconds(1);
 
         // Revert speed to normal
-        agent.speed = 2;
+        agent.speed = 3;
     }
 
 
@@ -133,7 +137,7 @@ public class Enemy : MonoBehaviour
     IEnumerator Die()
     {
         GameManager.Instance.gameData.inkAmount += inkAmount;
-        mesh.position = new(mesh.position.x, mesh.position.y - 5 * Time.deltaTime, mesh.position.z);
+        mesh.localPosition = new(0, mesh.localPosition.y - 5 * Time.deltaTime, 0);
         yield return new WaitForSeconds(0.5f);
         isDead = true;
     }
