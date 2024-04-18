@@ -31,6 +31,7 @@ public class GameManager : Singleton<GameManager>
         gameData.flashlightPower = Mathf.Clamp(gameData.flashlightPower, 0, 100);
 
         flashlightToggled = gameData.flashlightPower > 0 ? true : false;
+
         // if (gameData.flashlightPower <= 0f)
         // {
         //     flashlightToggled = false;
@@ -42,6 +43,8 @@ public class GameManager : Singleton<GameManager>
 
         // Health
         // ...
+        if (!flashlightToggled)
+            gameData.playerHealth = Globals.healthDrainSpeed * Time.deltaTime;
         gameData.playerHealth += Globals.healthRegen * Time.deltaTime;
         gameData.playerHealth = Mathf.Clamp(gameData.playerHealth, 0, 100);
 
@@ -62,7 +65,11 @@ public class GameManager : Singleton<GameManager>
         if (gameData.flashlightPower >= Globals.flashlightDrainOnHit)
             gameData.flashlightPower -= Globals.flashlightDrainOnHit;
         else
+        {
             gameData.playerHealth -= Globals.monsterDmg;
+            //player fog is lerped, so need to scale accordingly to how much time left
+            gameData.playerFog.time -= Globals.monsterDmg * Globals.healthDrainSpeed;
+        }
 
         gameData.flashlightPower = Mathf.Clamp(gameData.flashlightPower, 0, 100);
 

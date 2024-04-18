@@ -1,7 +1,9 @@
+using FischlWorks_FogWar;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Player : MonoBehaviour
 {
@@ -13,6 +15,10 @@ public class Player : MonoBehaviour
     private bool canRegenStamina = true;
     private bool canAttack = true;
     [SerializeField] private AttackHitBox attackHitBox = null;
+    [SerializeField] GameObject flashlight;
+    public float lightRadius;
+
+    
 
     public Animator animator;
 
@@ -23,7 +29,10 @@ public class Player : MonoBehaviour
         GlobalEvents.Instance.PlayerEnabled(this);
         InputEvents.onToggleSprint += (bool enable) => isSprinting = enable;
         InputEvents.onPlayerAttack += Attack;
-
+        //set player light
+        GameManager.Instance.gameData.playerFog = new NoFogPosition(transform.position, lightRadius, 0, GameManager.Instance.gameData.playerHealth / Globals.healthDrainSpeed, null, true);
+        
+        MinimapToFog.instance.AddNoFog(GameManager.Instance.gameData.playerFog);
         if (!rb) rb = GetComponent<Rigidbody>();
     }
 
@@ -32,6 +41,7 @@ public class Player : MonoBehaviour
     {
         InputEvents.onToggleSprint -= (bool enable) => isSprinting = enable;
         InputEvents.onPlayerAttack -= Attack;
+        MinimapToFog.instance.RemoveNoFog(GameManager.Instance.gameData.playerFog);
     }
 
 
@@ -45,9 +55,30 @@ public class Player : MonoBehaviour
 
         // Stamina
         UpdateStamina();
+
+        // Light
+        UpdateLight();
     }
 
-
+    //player light
+    void UpdateLight()
+    {
+        GameManager.Instance.gameData.playerFog.position = transform.position;
+        flashlight.gameObject.SetActive(GameManager.Instance.gameData.flashlightPower > 0);
+        if (GameManager.Instance.gameData.flashlightPower <= 0)
+        {
+            
+            if (GameManager.Instance.inUnknown)
+            {
+                GameManager.Instance.gameData.playerFog.noDecay = false;
+            }
+            else
+            {
+                GameManager.Instance.gameData.playerFog.noDecay = true;
+                GameManager.Instance.gameData.playerFog.ResetTime();
+            }
+        }
+    }
     private void UpdateStamina()
     {
         // Drain

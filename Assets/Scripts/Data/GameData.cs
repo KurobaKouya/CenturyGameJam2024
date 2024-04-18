@@ -1,3 +1,5 @@
+using UnityEngine;
+
 [System.Serializable]
 public class GameData
 {
@@ -8,7 +10,8 @@ public class GameData
     public Globals.ItemIndex itemInHand = Globals.ItemIndex.None;
     public bool relicInInventory = false;
     public float inkAmount = 0f;
-
+    //player light
+    public NoFogPosition playerFog = new NoFogPosition();
 
     // public GameData()
     // {

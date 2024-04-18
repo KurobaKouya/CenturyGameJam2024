@@ -46,7 +46,7 @@ public class ObjectPoolScript : MonoBehaviour
 
     public void DestroyObject(GameObject gameObject)
     {
-        gameObject.SetActive(false);
+        gameObject?.SetActive(false);
     }
 
     GameObject GetFromPool()

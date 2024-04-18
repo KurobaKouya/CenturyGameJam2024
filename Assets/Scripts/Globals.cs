@@ -5,7 +5,7 @@ public class Globals
     public static float playerMovementSpeed = 10f;
     public static float sprintMovementSpeed = 20f;
     public static float healthRegen = 5f;
-
+    public static float healthDrainSpeed = 5.0f;
 
     public  static float attackStaminaDrain = 15f;
     public static float sprintStaminaDrain = 5f;

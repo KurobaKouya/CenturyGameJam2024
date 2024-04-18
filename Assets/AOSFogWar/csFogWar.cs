@@ -432,7 +432,7 @@ namespace FischlWorks_FogWar
 
             foreach (FogRevealer fogRevealer in fogRevealers)
             {
-                if (fogRevealer._UpdateOnlyOnMove == false)
+                if (fogRevealer._UpdateOnlyOnMove == false || !fogRevealer._RevealerTransform.gameObject.activeInHierarchy)
                 {
                     break;
                 }
