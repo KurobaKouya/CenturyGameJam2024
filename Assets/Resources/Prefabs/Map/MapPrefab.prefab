@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 2391829989841932308}
   - component: {fileID: 1077945388703268345}
   - component: {fileID: 6853937157545705301}
+  - component: {fileID: 6571614741566749210}
   m_Layer: 8
   m_Name: MapCam
   m_TagString: Untagged
@@ -102,11 +103,11 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 30
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 72
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: a081b3139a066194b9ecc9fcb721be3f, type: 2}
   m_TargetDisplay: 0
@@ -138,6 +139,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e375286e3a33a90418c34346441bdc3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6571614741566749210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7294309145520297026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!1001 &437869565154928618
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -252,6 +297,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8066600232463087505, guid: 44f32bfbc0949104d9d4e33a5fa3f793, type: 3}
       propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8873283329683077896, guid: 44f32bfbc0949104d9d4e33a5fa3f793, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8873283329683077896, guid: 44f32bfbc0949104d9d4e33a5fa3f793, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8873283329683077896, guid: 44f32bfbc0949104d9d4e33a5fa3f793, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8873283329683077896, guid: 44f32bfbc0949104d9d4e33a5fa3f793, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9018768962674047028, guid: 44f32bfbc0949104d9d4e33a5fa3f793, type: 3}
