@@ -396,6 +396,8 @@ namespace FischlWorks_FogWar
             fogPlane.GetComponent<MeshRenderer>().material.SetTexture("_MainTex", fogPlaneTextureLerpBuffer);
 
             fogPlane.GetComponent<MeshCollider>().enabled = false;
+
+            fogPlane.gameObject.layer = LayerMask.NameToLayer("Obstacle");
         }
 
 

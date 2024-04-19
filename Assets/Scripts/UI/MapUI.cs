@@ -23,7 +23,10 @@ public class MapUI : UIBase
 
     public override void Toggle()
     {
-        base.Toggle();
+        isToggled = !isToggled;
+        canvasGroup.alpha = isToggled ? 1f : 0f;
+        canvasGroup.blocksRaycasts = isToggled;
+        canvasGroup.interactable = isToggled;
         GameManager.Instance.inMap = isToggled;
         AudioManager.instance.PlaySourceAudio(isToggled ? openMapAud : closeMapAud);
     }
