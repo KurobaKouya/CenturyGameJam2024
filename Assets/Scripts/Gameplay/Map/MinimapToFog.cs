@@ -36,6 +36,7 @@ public class NoFogPosition
     public void ResetTime()
     {
         time = 0;
+        currentSize = startSize;
         time -= timeBeforeDecay;
     }
 }

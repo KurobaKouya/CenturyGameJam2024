@@ -28,6 +28,7 @@ public class MapUI : UIBase
     void DisableMap()
     {
         SetActive(false);
+        GameManager.Instance.inMap = isToggled;
     }
 
     private void Update()
