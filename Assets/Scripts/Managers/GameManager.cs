@@ -7,7 +7,7 @@ public class GameManager : Singleton<GameManager>
     [HideInInspector] public GameData gameData = null;
     [HideInInspector] public Player player { get; private set; }
     [HideInInspector] public bool flashlightToggled = false;
-    [HideInInspector] public bool inUnknown = false;
+     public bool inUnknown = false;
     [HideInInspector] public bool inMap = false;
 
     public void Init()

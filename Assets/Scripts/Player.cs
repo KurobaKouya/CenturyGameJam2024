@@ -56,6 +56,18 @@ public class Player : MonoBehaviour
 
         // Light
         UpdateLight();
+
+        //Weapon
+        UpdateWeapon();
+
+        //while in light
+        WhileInLight();
+    }
+
+
+    void UpdateWeapon()
+    {
+        animator.SetLayerWeight(1, canAttack ? 1 : 0);
     }
 
     //player light
@@ -123,17 +135,31 @@ public class Player : MonoBehaviour
     }
 
 
-    private void OnTriggerStay(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("SafeZone"))
         {
             GameManager.Instance.inUnknown = false;
+            
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("SafeZone"))
+        {
+            GameManager.Instance.inUnknown = true;
+        }
+    }
+
+    void WhileInLight()
+    {
+        if (!GameManager.Instance.inUnknown)
+        {
             GameManager.Instance.gameData.playerHealth = Globals.playerHealth;
             GameManager.Instance.gameData.playerFog.ResetTime();
         }
-        else GameManager.Instance.inUnknown = true;
     }
-
 
     private void LookAtCursor()
     {

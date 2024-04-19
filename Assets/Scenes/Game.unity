@@ -187,6 +187,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3466754672198338973, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5583044963416563336, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
       propertyPath: m_Name
       value: Bush 2 (10)
@@ -213,6 +217,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 2 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1129118693435003515, guid: 858a5ea42b71876438bc457f689d3be3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 2678677639334991163, guid: 858a5ea42b71876438bc457f689d3be3, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -291,6 +299,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 2 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1129118693435003515, guid: 858a5ea42b71876438bc457f689d3be3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 2678677639334991163, guid: 858a5ea42b71876438bc457f689d3be3, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -474,6 +486,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 2 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1129118693435003515, guid: 858a5ea42b71876438bc457f689d3be3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 2678677639334991163, guid: 858a5ea42b71876438bc457f689d3be3, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -648,6 +664,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3466754672198338973, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5583044963416563336, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
       propertyPath: m_Name
       value: Bush 2 (4)
@@ -787,6 +807,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6023388790665318995, guid: f7a54c9d6a3e92b4dba3351f26737b86, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 8500869972743623841, guid: f7a54c9d6a3e92b4dba3351f26737b86, type: 3}
       propertyPath: m_Name
       value: Ruin wall 1.thin Ink
@@ -809,6 +833,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1091118453}
     m_Modifications:
+    - target: {fileID: 2648336757524764061, guid: 188597b377a97ac41b457eadb16f1a9e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 3395063496916235911, guid: 188597b377a97ac41b457eadb16f1a9e, type: 3}
       propertyPath: m_Name
       value: Ruin 2
@@ -891,6 +919,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 3 Ink (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 3997124128530814860, guid: 4d5241c1a4e6c104ca97ec6015d3228d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5158998968807846349, guid: 4d5241c1a4e6c104ca97ec6015d3228d, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -969,6 +1001,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 3 Ink (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3997124128530814860, guid: 4d5241c1a4e6c104ca97ec6015d3228d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5158998968807846349, guid: 4d5241c1a4e6c104ca97ec6015d3228d, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -1047,6 +1083,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 3 Ink (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3997124128530814860, guid: 4d5241c1a4e6c104ca97ec6015d3228d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5158998968807846349, guid: 4d5241c1a4e6c104ca97ec6015d3228d, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -1177,6 +1217,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3466754672198338973, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5583044963416563336, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
       propertyPath: m_Name
       value: Bush 2 (23)
@@ -1255,6 +1299,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3466754672198338973, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5583044963416563336, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
       propertyPath: m_Name
       value: Bush 2 (9)
@@ -1281,6 +1329,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 2 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1129118693435003515, guid: 858a5ea42b71876438bc457f689d3be3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 2678677639334991163, guid: 858a5ea42b71876438bc457f689d3be3, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -1411,6 +1463,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4424243347228548053, guid: 617246fec27cb5e4994b9d812e419265, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 7629229540047332279, guid: 617246fec27cb5e4994b9d812e419265, type: 3}
       propertyPath: m_Name
       value: Ruin 1.002Ink
@@ -1437,6 +1493,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 3 Ink (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3997124128530814860, guid: 4d5241c1a4e6c104ca97ec6015d3228d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5158998968807846349, guid: 4d5241c1a4e6c104ca97ec6015d3228d, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -1567,6 +1627,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3466754672198338973, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5583044963416563336, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
       propertyPath: m_Name
       value: Bush 2 (6)
@@ -1593,6 +1657,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bush 1 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 6501386982737663156, guid: 2260be4a4da63a643bfddd685e182a36, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 8637182338292530661, guid: 2260be4a4da63a643bfddd685e182a36, type: 3}
       propertyPath: m_LocalScale.x
       value: 28.997618
@@ -1723,6 +1791,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3466754672198338973, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5583044963416563336, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
       propertyPath: m_Name
       value: Bush 2 (3)
@@ -1749,6 +1821,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 3 Ink (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3997124128530814860, guid: 4d5241c1a4e6c104ca97ec6015d3228d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5158998968807846349, guid: 4d5241c1a4e6c104ca97ec6015d3228d, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -1827,6 +1903,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bush 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6501386982737663156, guid: 2260be4a4da63a643bfddd685e182a36, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 8637182338292530661, guid: 2260be4a4da63a643bfddd685e182a36, type: 3}
       propertyPath: m_LocalScale.x
       value: 28.997618
@@ -1905,6 +1985,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bush 1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6501386982737663156, guid: 2260be4a4da63a643bfddd685e182a36, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 8637182338292530661, guid: 2260be4a4da63a643bfddd685e182a36, type: 3}
       propertyPath: m_LocalScale.x
       value: 28.997618
@@ -1983,6 +2067,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 2 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1129118693435003515, guid: 858a5ea42b71876438bc457f689d3be3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 2678677639334991163, guid: 858a5ea42b71876438bc457f689d3be3, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -2061,6 +2149,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ruin 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2233990378340137088, guid: da52a6d425fcf71439c47fb493870a75, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 3054155318179457193, guid: da52a6d425fcf71439c47fb493870a75, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -2195,6 +2287,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Ruin wall 2.thin.001 Ink '
       objectReference: {fileID: 0}
+    - target: {fileID: 7560269063868222294, guid: 5bb3d6fc9c72a584c81f4462f9a08a5a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2215,6 +2311,7 @@ GameObject:
   m_Component:
   - component: {fileID: 389927910}
   - component: {fileID: 389927909}
+  - component: {fileID: 389927911}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -2299,6 +2396,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &389927911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 389927908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1001 &398497866
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2307,6 +2427,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1091118453}
     m_Modifications:
+    - target: {fileID: 2330316821832968334, guid: 702e796cec15bff45824b7796a0bf5ad, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 6827062204686748562, guid: 702e796cec15bff45824b7796a0bf5ad, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -2385,6 +2509,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1091118453}
     m_Modifications:
+    - target: {fileID: 5403390461414334506, guid: d0872ce3fccf6c743b4f0515aa86abe3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5817769667933334441, guid: d0872ce3fccf6c743b4f0515aa86abe3, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -2467,6 +2595,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 2 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 1129118693435003515, guid: 858a5ea42b71876438bc457f689d3be3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 2678677639334991163, guid: 858a5ea42b71876438bc457f689d3be3, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -2725,6 +2857,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1091118453}
     m_Modifications:
+    - target: {fileID: 2330316821832968334, guid: 702e796cec15bff45824b7796a0bf5ad, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 6827062204686748562, guid: 702e796cec15bff45824b7796a0bf5ad, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -2807,6 +2943,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 2 Ink
       objectReference: {fileID: 0}
+    - target: {fileID: 4484419243741914179, guid: 0c08c33bff815434e8e8c5adb4c7f807, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 7131450372888593189, guid: 0c08c33bff815434e8e8c5adb4c7f807, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -2881,6 +3021,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1091118453}
     m_Modifications:
+    - target: {fileID: 912439236591088547, guid: 7eec3167b405c904a8497060f8f43b02, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 1368237291988985478, guid: 7eec3167b405c904a8497060f8f43b02, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -3067,6 +3211,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3466754672198338973, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5583044963416563336, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
       propertyPath: m_Name
       value: Bush 2 (5)
@@ -3145,6 +3293,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3466754672198338973, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5583044963416563336, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
       propertyPath: m_Name
       value: Bush 2 (16)
@@ -3241,7 +3393,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 859234071}
+  m_Father: {fileID: 4968767912058330760}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &623482998
 PrefabInstance:
@@ -3255,6 +3407,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 2 (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 1129118693435003515, guid: 858a5ea42b71876438bc457f689d3be3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 2678677639334991163, guid: 858a5ea42b71876438bc457f689d3be3, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -3385,6 +3541,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3466754672198338973, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5583044963416563336, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
       propertyPath: m_Name
       value: Bush 2 (18)
@@ -3411,6 +3571,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 3 Ink
       objectReference: {fileID: 0}
+    - target: {fileID: 3997124128530814860, guid: 4d5241c1a4e6c104ca97ec6015d3228d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5158998968807846349, guid: 4d5241c1a4e6c104ca97ec6015d3228d, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -3541,6 +3705,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3466754672198338973, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5583044963416563336, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
       propertyPath: m_Name
       value: Bush 2 (28)
@@ -3619,6 +3787,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3466754672198338973, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5583044963416563336, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
       propertyPath: m_Name
       value: Bush 2 (32)
@@ -3701,6 +3873,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ruin 4.001 Ink
       objectReference: {fileID: 0}
+    - target: {fileID: 7057944260908160725, guid: ab278bae087c0ce40b238cdf9e1bc7da, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3723,6 +3899,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 3 Ink (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 3997124128530814860, guid: 4d5241c1a4e6c104ca97ec6015d3228d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5158998968807846349, guid: 4d5241c1a4e6c104ca97ec6015d3228d, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -3801,6 +3981,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 2 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1129118693435003515, guid: 858a5ea42b71876438bc457f689d3be3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 2678677639334991163, guid: 858a5ea42b71876438bc457f689d3be3, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -3931,6 +4115,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3466754672198338973, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5583044963416563336, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
       propertyPath: m_Name
       value: Bush 2
@@ -4183,6 +4371,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bush 1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6501386982737663156, guid: 2260be4a4da63a643bfddd685e182a36, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 8637182338292530661, guid: 2260be4a4da63a643bfddd685e182a36, type: 3}
       propertyPath: m_LocalScale.x
       value: 28.997618
@@ -4360,6 +4552,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1091118453}
     m_Modifications:
+    - target: {fileID: 2671418391827113688, guid: f2430db0161ae6c46bacf4e7fe3326f1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 3963730496756271703, guid: f2430db0161ae6c46bacf4e7fe3326f1, type: 3}
       propertyPath: m_LocalScale.x
       value: 48.792015
@@ -4438,6 +4634,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1091118453}
     m_Modifications:
+    - target: {fileID: 2330316821832968334, guid: 702e796cec15bff45824b7796a0bf5ad, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 6827062204686748562, guid: 702e796cec15bff45824b7796a0bf5ad, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -4592,6 +4792,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1129118693435003515, guid: 858a5ea42b71876438bc457f689d3be3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 2678677639334991163, guid: 858a5ea42b71876438bc457f689d3be3, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -4733,11 +4937,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 848780163}
   m_CullTransparentMesh: 1
---- !u!4 &859234071 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4353686429519775732, guid: 2b6695801b0aecb4da67efa723c79a8e, type: 3}
-  m_PrefabInstance: {fileID: 4968767912058330759}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &893906651
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4802,6 +5001,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2092298145852410889, guid: a05990c2616ca9148b3ca3dd776e32ed, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 6356167981032836942, guid: a05990c2616ca9148b3ca3dd776e32ed, type: 3}
       propertyPath: m_Name
       value: Ruin 3.00 Ink
@@ -4828,6 +5031,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1129118693435003515, guid: 858a5ea42b71876438bc457f689d3be3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 2678677639334991163, guid: 858a5ea42b71876438bc457f689d3be3, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -5042,6 +5249,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1091118453}
     m_Modifications:
+    - target: {fileID: 2330316821832968334, guid: 702e796cec15bff45824b7796a0bf5ad, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 6827062204686748562, guid: 702e796cec15bff45824b7796a0bf5ad, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -5176,6 +5387,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3466754672198338973, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5583044963416563336, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
       propertyPath: m_Name
       value: Bush 2 (29)
@@ -5254,6 +5469,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3466754672198338973, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5583044963416563336, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
       propertyPath: m_Name
       value: Bush 2 (19)
@@ -5332,6 +5551,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3466754672198338973, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5583044963416563336, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
       propertyPath: m_Name
       value: Bush 2 (31)
@@ -5593,6 +5816,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 2 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 1129118693435003515, guid: 858a5ea42b71876438bc457f689d3be3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 2678677639334991163, guid: 858a5ea42b71876438bc457f689d3be3, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -5667,6 +5894,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1091118453}
     m_Modifications:
+    - target: {fileID: 3483343774292666660, guid: 34f079ab3120f3f4199774dde0ce8dd6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5561589664348769040, guid: 34f079ab3120f3f4199774dde0ce8dd6, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -5847,6 +6078,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3466754672198338973, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5583044963416563336, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
       propertyPath: m_Name
       value: Bush 2 (25)
@@ -5925,6 +6160,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3466754672198338973, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5583044963416563336, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
       propertyPath: m_Name
       value: Bush 2 (14)
@@ -6185,6 +6424,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3466754672198338973, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5583044963416563336, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
       propertyPath: m_Name
       value: Bush 2 (17)
@@ -6263,6 +6506,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3466754672198338973, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5583044963416563336, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
       propertyPath: m_Name
       value: Bush 2 (2)
@@ -6357,7 +6604,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 689fbc7829a06f64fa2b4a3f959b2a6c, type: 2}
+  - {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6400,6 +6647,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1091118453}
     m_Modifications:
+    - target: {fileID: 2330316821832968334, guid: 702e796cec15bff45824b7796a0bf5ad, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 6827062204686748562, guid: 702e796cec15bff45824b7796a0bf5ad, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -6534,6 +6785,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3466754672198338973, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5583044963416563336, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
       propertyPath: m_Name
       value: Bush 2 (13)
@@ -6616,6 +6871,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7055685387151148182, guid: 855a3ab78706f64439c91aee4a8fa3aa, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6674,6 +6933,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Log
       objectReference: {fileID: 0}
+    - target: {fileID: 4134764342311883848, guid: edbf83839fbe72d43929228c7315663c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5524889373213898512, guid: edbf83839fbe72d43929228c7315663c, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -6748,6 +7011,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1091118453}
     m_Modifications:
+    - target: {fileID: 2330316821832968334, guid: 702e796cec15bff45824b7796a0bf5ad, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 6827062204686748562, guid: 702e796cec15bff45824b7796a0bf5ad, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -6830,6 +7097,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 3 Ink (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 3997124128530814860, guid: 4d5241c1a4e6c104ca97ec6015d3228d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5158998968807846349, guid: 4d5241c1a4e6c104ca97ec6015d3228d, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -6960,6 +7231,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3466754672198338973, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5583044963416563336, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
       propertyPath: m_Name
       value: Bush 2 (30)
@@ -6986,6 +7261,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 3 Ink (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 3997124128530814860, guid: 4d5241c1a4e6c104ca97ec6015d3228d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5158998968807846349, guid: 4d5241c1a4e6c104ca97ec6015d3228d, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -7060,6 +7339,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1091118453}
     m_Modifications:
+    - target: {fileID: 1025148473433606267, guid: f37c3dee145846b4b8ee42f13213bbb3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 3002892789468049574, guid: f37c3dee145846b4b8ee42f13213bbb3, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -7142,6 +7425,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 3 Ink (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 3997124128530814860, guid: 4d5241c1a4e6c104ca97ec6015d3228d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5158998968807846349, guid: 4d5241c1a4e6c104ca97ec6015d3228d, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -7306,6 +7593,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3466754672198338973, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5583044963416563336, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
       propertyPath: m_Name
       value: Bush 2 (21)
@@ -7332,6 +7623,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bush 1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6501386982737663156, guid: 2260be4a4da63a643bfddd685e182a36, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 8637182338292530661, guid: 2260be4a4da63a643bfddd685e182a36, type: 3}
       propertyPath: m_LocalScale.x
       value: 28.997618
@@ -7406,6 +7701,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1091118453}
     m_Modifications:
+    - target: {fileID: 1051318551125167173, guid: b279dc67443af2e4aa7c7655c58ae64e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 6795364940221419300, guid: b279dc67443af2e4aa7c7655c58ae64e, type: 3}
       propertyPath: m_Name
       value: Ruin 2.001 Ink
@@ -7484,6 +7783,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1091118453}
     m_Modifications:
+    - target: {fileID: 311109984675124639, guid: 9d831508f93b56c4390bd30025e7761a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 2844390873232442553, guid: 9d831508f93b56c4390bd30025e7761a, type: 3}
       propertyPath: m_Name
       value: Stump
@@ -7566,6 +7869,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 3 Ink (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 3997124128530814860, guid: 4d5241c1a4e6c104ca97ec6015d3228d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5158998968807846349, guid: 4d5241c1a4e6c104ca97ec6015d3228d, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -7640,6 +7947,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1091118453}
     m_Modifications:
+    - target: {fileID: 2330316821832968334, guid: 702e796cec15bff45824b7796a0bf5ad, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 6827062204686748562, guid: 702e796cec15bff45824b7796a0bf5ad, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -7722,6 +8033,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 2 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1129118693435003515, guid: 858a5ea42b71876438bc457f689d3be3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 2678677639334991163, guid: 858a5ea42b71876438bc457f689d3be3, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -7852,6 +8167,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3466754672198338973, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5583044963416563336, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
       propertyPath: m_Name
       value: Bush 2 (20)
@@ -7934,6 +8253,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5224486235135878895, guid: c7612ee0d3ce5ae46b15495ca38308a5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7956,6 +8279,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 2 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 1129118693435003515, guid: 858a5ea42b71876438bc457f689d3be3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 2678677639334991163, guid: 858a5ea42b71876438bc457f689d3be3, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -8095,6 +8422,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 3 Ink (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 3997124128530814860, guid: 4d5241c1a4e6c104ca97ec6015d3228d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5158998968807846349, guid: 4d5241c1a4e6c104ca97ec6015d3228d, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -8278,6 +8609,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1129118693435003515, guid: 858a5ea42b71876438bc457f689d3be3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 2678677639334991163, guid: 858a5ea42b71876438bc457f689d3be3, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -8412,6 +8747,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sphere.010
       objectReference: {fileID: 0}
+    - target: {fileID: 7875888036734976767, guid: 43bf5b4f11c4d8e43b251c62e44b3fd0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8486,6 +8825,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3466754672198338973, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5583044963416563336, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
       propertyPath: m_Name
       value: Bush 2 (15)
@@ -8568,6 +8911,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3985032583302659721, guid: 88e309ee2ec827d4da1dbeefc2185ef2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8590,6 +8937,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 3 Ink (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 3997124128530814860, guid: 4d5241c1a4e6c104ca97ec6015d3228d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5158998968807846349, guid: 4d5241c1a4e6c104ca97ec6015d3228d, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -8720,6 +9071,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4916701435909791389, guid: 83157f12ce5217e40b6b322ce4ddae89, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 7262433442574313882, guid: 83157f12ce5217e40b6b322ce4ddae89, type: 3}
       propertyPath: m_Name
       value: Ruin wall 2.001Ink
@@ -8802,6 +9157,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7509599244398525085, guid: bddccd15364ed2148957ab591c967c58, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8824,6 +9183,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 3 Ink (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 3997124128530814860, guid: 4d5241c1a4e6c104ca97ec6015d3228d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5158998968807846349, guid: 4d5241c1a4e6c104ca97ec6015d3228d, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -8898,6 +9261,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1091118453}
     m_Modifications:
+    - target: {fileID: 2330316821832968334, guid: 702e796cec15bff45824b7796a0bf5ad, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 6827062204686748562, guid: 702e796cec15bff45824b7796a0bf5ad, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -9093,6 +9460,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3466754672198338973, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5583044963416563336, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
       propertyPath: m_Name
       value: Bush 2 (11)
@@ -9115,6 +9486,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1091118453}
     m_Modifications:
+    - target: {fileID: 2076924506291501672, guid: 5933f13713ee21d48885bf284de7d2e1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 3550995111476646185, guid: 5933f13713ee21d48885bf284de7d2e1, type: 3}
       propertyPath: m_Name
       value: Ruin 3
@@ -9312,6 +9687,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3466754672198338973, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5583044963416563336, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
       propertyPath: m_Name
       value: Bush 2 (27)
@@ -9496,6 +9875,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3466754672198338973, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5583044963416563336, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
       propertyPath: m_Name
       value: Bush 2 (7)
@@ -9574,6 +9957,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3466754672198338973, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5583044963416563336, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
       propertyPath: m_Name
       value: Bush 2 (26)
@@ -9600,6 +9987,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7874960107842939552, guid: b7e2b3c0cdd62954cb0784ddf958ed20, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 8489543179548418287, guid: b7e2b3c0cdd62954cb0784ddf958ed20, type: 3}
       propertyPath: m_LocalScale.x
       value: 114.527145
@@ -9678,6 +10069,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 3 Ink (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3997124128530814860, guid: 4d5241c1a4e6c104ca97ec6015d3228d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5158998968807846349, guid: 4d5241c1a4e6c104ca97ec6015d3228d, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -9756,6 +10151,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 2 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 1129118693435003515, guid: 858a5ea42b71876438bc457f689d3be3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 2678677639334991163, guid: 858a5ea42b71876438bc457f689d3be3, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -9834,6 +10233,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 3 Ink (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 3997124128530814860, guid: 4d5241c1a4e6c104ca97ec6015d3228d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5158998968807846349, guid: 4d5241c1a4e6c104ca97ec6015d3228d, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -9912,6 +10315,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bush 1 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6501386982737663156, guid: 2260be4a4da63a643bfddd685e182a36, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 8637182338292530661, guid: 2260be4a4da63a643bfddd685e182a36, type: 3}
       propertyPath: m_LocalScale.x
       value: 28.997618
@@ -10047,6 +10454,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1091118453}
     m_Modifications:
+    - target: {fileID: 2330316821832968334, guid: 702e796cec15bff45824b7796a0bf5ad, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 6827062204686748562, guid: 702e796cec15bff45824b7796a0bf5ad, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -10134,6 +10545,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bush 1 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 6501386982737663156, guid: 2260be4a4da63a643bfddd685e182a36, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 8637182338292530661, guid: 2260be4a4da63a643bfddd685e182a36, type: 3}
       propertyPath: m_LocalScale.x
       value: 28.997618
@@ -10212,6 +10627,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 2 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 1129118693435003515, guid: 858a5ea42b71876438bc457f689d3be3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 2678677639334991163, guid: 858a5ea42b71876438bc457f689d3be3, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -10290,6 +10709,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 2 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1129118693435003515, guid: 858a5ea42b71876438bc457f689d3be3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 2678677639334991163, guid: 858a5ea42b71876438bc457f689d3be3, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -10420,6 +10843,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3466754672198338973, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5583044963416563336, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
       propertyPath: m_Name
       value: Bush 2 (24)
@@ -10498,6 +10925,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3466754672198338973, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5583044963416563336, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
       propertyPath: m_Name
       value: Bush 2 (22)
@@ -10524,6 +10955,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 2 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1129118693435003515, guid: 858a5ea42b71876438bc457f689d3be3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 2678677639334991163, guid: 858a5ea42b71876438bc457f689d3be3, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -10705,6 +11140,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bush 1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6501386982737663156, guid: 2260be4a4da63a643bfddd685e182a36, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 8637182338292530661, guid: 2260be4a4da63a643bfddd685e182a36, type: 3}
       propertyPath: m_LocalScale.x
       value: 28.997618
@@ -10858,6 +11297,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ruin 4
       objectReference: {fileID: 0}
+    - target: {fileID: 7852079849090969877, guid: 676cbb57ba9a26140a5b1a25c3de518c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 8247557307702206750, guid: 676cbb57ba9a26140a5b1a25c3de518c, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -10988,6 +11431,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3466754672198338973, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5583044963416563336, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
       propertyPath: m_Name
       value: Bush 2 (1)
@@ -11010,6 +11457,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1091118453}
     m_Modifications:
+    - target: {fileID: 1085060587815399937, guid: 30aa6c6f673a4ad4da7840bcf15939ef, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 2360321041914242429, guid: 30aa6c6f673a4ad4da7840bcf15939ef, type: 3}
       propertyPath: m_Name
       value: Ruin L. Ink
@@ -11092,6 +11543,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 3 Ink (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 3997124128530814860, guid: 4d5241c1a4e6c104ca97ec6015d3228d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5158998968807846349, guid: 4d5241c1a4e6c104ca97ec6015d3228d, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -11170,6 +11625,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 2 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 1129118693435003515, guid: 858a5ea42b71876438bc457f689d3be3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 2678677639334991163, guid: 858a5ea42b71876438bc457f689d3be3, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -11248,6 +11707,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 3 Ink (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 3997124128530814860, guid: 4d5241c1a4e6c104ca97ec6015d3228d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5158998968807846349, guid: 4d5241c1a4e6c104ca97ec6015d3228d, type: 3}
       propertyPath: m_LocalScale.x
       value: 159.60425
@@ -11331,6 +11794,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bush 1 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 6501386982737663156, guid: 2260be4a4da63a643bfddd685e182a36, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 8637182338292530661, guid: 2260be4a4da63a643bfddd685e182a36, type: 3}
       propertyPath: m_LocalScale.x
       value: 28.997618
@@ -11461,6 +11928,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3466754672198338973, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5583044963416563336, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
       propertyPath: m_Name
       value: Bush 2 (12)
@@ -11539,6 +12010,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3466754672198338973, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 5583044963416563336, guid: b4df9a9e8afc8a448b86629b90948feb, type: 3}
       propertyPath: m_Name
       value: Bush 2 (8)
@@ -11626,6 +12101,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bush 1 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 6501386982737663156, guid: 2260be4a4da63a643bfddd685e182a36, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee82cb9983fdd8428d2849e0e070333, type: 2}
     - target: {fileID: 8637182338292530661, guid: 2260be4a4da63a643bfddd685e182a36, type: 3}
       propertyPath: m_LocalScale.x
       value: 28.997618
@@ -11820,11 +12299,16 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 4353686429519775732, guid: 2b6695801b0aecb4da67efa723c79a8e, type: 3}
-      insertIndex: 0
+    - targetCorrespondingSourceObject: {fileID: 389004668617875234, guid: 2b6695801b0aecb4da67efa723c79a8e, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 617784592}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b6695801b0aecb4da67efa723c79a8e, type: 3}
+--- !u!4 &4968767912058330760 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 389004668617875234, guid: 2b6695801b0aecb4da67efa723c79a8e, type: 3}
+  m_PrefabInstance: {fileID: 4968767912058330759}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6106561182051100080
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11929,7 +12413,15 @@ PrefabInstance:
     - target: {fileID: 2024235747786717605, guid: 135a20898c18dc84a9d92efc88378482, type: 3}
       propertyPath: levelMidPoint
       value: 
-      objectReference: {fileID: 1128073252}
+      objectReference: {fileID: 4968767912058330760}
+    - target: {fileID: 2024235747786717605, guid: 135a20898c18dc84a9d92efc88378482, type: 3}
+      propertyPath: levelDimensionX
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2024235747786717605, guid: 135a20898c18dc84a9d92efc88378482, type: 3}
+      propertyPath: levelDimensionY
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 2024235747786717605, guid: 135a20898c18dc84a9d92efc88378482, type: 3}
       propertyPath: fogRevealers.Array.size
       value: 4
@@ -11978,6 +12470,34 @@ PrefabInstance:
       propertyPath: fogRevealers.Array.data[4].revealerTransform
       value: 
       objectReference: {fileID: 1125814976}
+    - target: {fileID: 3123440835167868209, guid: 135a20898c18dc84a9d92efc88378482, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9999757
+      objectReference: {fileID: 0}
+    - target: {fileID: 3123440835167868209, guid: 135a20898c18dc84a9d92efc88378482, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.006493913
+      objectReference: {fileID: 0}
+    - target: {fileID: 3123440835167868209, guid: 135a20898c18dc84a9d92efc88378482, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.00002811353
+      objectReference: {fileID: 0}
+    - target: {fileID: 3123440835167868209, guid: 135a20898c18dc84a9d92efc88378482, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0025659439
+      objectReference: {fileID: 0}
+    - target: {fileID: 3123440835167868209, guid: 135a20898c18dc84a9d92efc88378482, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0.744
+      objectReference: {fileID: 0}
+    - target: {fileID: 3123440835167868209, guid: 135a20898c18dc84a9d92efc88378482, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 3123440835167868209, guid: 135a20898c18dc84a9d92efc88378482, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.294
+      objectReference: {fileID: 0}
     - target: {fileID: 4616761310311114044, guid: 135a20898c18dc84a9d92efc88378482, type: 3}
       propertyPath: m_SizeDelta.x
       value: 300
