@@ -46,7 +46,7 @@ public class MinimapToFog : MonoBehaviour
 {
     [SerializeField] csFogWar fogWar;
     [SerializeField] MiniMapController controller;
-    [SerializeField] float startSize = 5;
+    [SerializeField] float startSize = 2;
     [SerializeField] float timeBeforeDecay = 1;
     [SerializeField] float decayTime = 10;
     [SerializeField] float updateTime;

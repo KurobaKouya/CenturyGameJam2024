@@ -23,8 +23,8 @@ public class SetLightPositionShader : MonoBehaviour
     {
         for (int i = 0; i < rend.Length; i++)
         {
-            Vector3 pos = GameManager.Instance.player.transform.position;
-            pos.y = rend[i].gameObject.transform.position.y;
+            Vector3 pos = GameManager.Instance.player.transform.position + GameManager.Instance.player.transform.forward * 2;
+            //pos.y = rend[i].gameObject.transform.position.y;
             rend[i].material.SetVector("_LightPosition", pos);
             Debug.Log("SetLight: " + rend[i].name);
         }

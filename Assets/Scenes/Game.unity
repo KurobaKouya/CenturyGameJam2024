@@ -587,7 +587,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 30
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -891,7 +891,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 90
+  field of view: 50
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -2381,6 +2381,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d07b7d7625193f409568631d371d33f, type: 3}
+--- !u!4 &1602187135 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7345706526390140353, guid: 41cd673866e48f341bfb569431e5c33e, type: 3}
+  m_PrefabInstance: {fileID: 6106561182051100080}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1643952848
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2894,9 +2899,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: RelicAltar
       objectReference: {fileID: 0}
+    - target: {fileID: 1399897121205121629, guid: 41cd673866e48f341bfb569431e5c33e, type: 3}
+      propertyPath: m_TagString
+      value: SafeZone
+      objectReference: {fileID: 0}
     - target: {fileID: 7345706526390140353, guid: 41cd673866e48f341bfb569431e5c33e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.389611
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7345706526390140353, guid: 41cd673866e48f341bfb569431e5c33e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2904,7 +2913,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7345706526390140353, guid: 41cd673866e48f341bfb569431e5c33e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.5191078
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7345706526390140353, guid: 41cd673866e48f341bfb569431e5c33e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3021,7 +3030,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2024235747786717605, guid: 135a20898c18dc84a9d92efc88378482, type: 3}
       propertyPath: fogRevealers.Array.data[0].sightRange
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2024235747786717605, guid: 135a20898c18dc84a9d92efc88378482, type: 3}
       propertyPath: fogRevealers.Array.data[1].sightRange
@@ -3046,7 +3055,7 @@ PrefabInstance:
     - target: {fileID: 2024235747786717605, guid: 135a20898c18dc84a9d92efc88378482, type: 3}
       propertyPath: fogRevealers.Array.data[0].revealerTransform
       value: 
-      objectReference: {fileID: 44032430}
+      objectReference: {fileID: 1602187135}
     - target: {fileID: 2024235747786717605, guid: 135a20898c18dc84a9d92efc88378482, type: 3}
       propertyPath: fogRevealers.Array.data[1].revealerTransform
       value: 

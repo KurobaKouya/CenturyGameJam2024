@@ -37,6 +37,7 @@ public class Player : MonoBehaviour
         GameManager.Instance.gameData.playerFog = new NoFogPosition(transform.position, lightRadius, 0, Globals.playerHealth / Globals.healthDrainSpeed, null, true, true);
         GameEvents.onPlayerHit += () => AudioManager.instance.PlaySourceAudio(hurtSFX);
         FindObjectOfType<MinimapToFog>().AddNoFog(GameManager.Instance.gameData.playerFog);
+        GameEvents.onPlayerDeath += ResetPlayerStats;
         if (!rb) rb = GetComponent<Rigidbody>();
     }
 
@@ -47,6 +48,7 @@ public class Player : MonoBehaviour
         InputEvents.onPlayerAttack -= Attack;
         GameEvents.onPlayerHit -= () => AudioManager.instance.PlaySourceAudio(hurtSFX); 
         FindObjectOfType<MinimapToFog>().RemoveNoFog(GameManager.Instance?.gameData.playerFog);
+        GameEvents.onPlayerDeath -= ResetPlayerStats;
     }
 
 

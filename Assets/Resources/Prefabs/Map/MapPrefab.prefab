@@ -247,6 +247,26 @@ PrefabInstance:
       propertyPath: miniMapCam
       value: 
       objectReference: {fileID: 2391829989841932308}
+    - target: {fileID: 6368707643553346947, guid: 44f32bfbc0949104d9d4e33a5fa3f793, type: 3}
+      propertyPath: drawSFX.audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ba76ab63df2476d40922e02b0a2f1575, type: 3}
+    - target: {fileID: 6368707643553346947, guid: 44f32bfbc0949104d9d4e33a5fa3f793, type: 3}
+      propertyPath: drawSFX.pitchMaxRange
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6368707643553346947, guid: 44f32bfbc0949104d9d4e33a5fa3f793, type: 3}
+      propertyPath: drawSFX.pitchMinRange
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6368707643553346947, guid: 44f32bfbc0949104d9d4e33a5fa3f793, type: 3}
+      propertyPath: drawSFX.volumeMaxRange
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6368707643553346947, guid: 44f32bfbc0949104d9d4e33a5fa3f793, type: 3}
+      propertyPath: drawSFX.volumeMinRange
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 6518302014165500998, guid: 44f32bfbc0949104d9d4e33a5fa3f793, type: 3}
       propertyPath: m_Camera
       value: 
