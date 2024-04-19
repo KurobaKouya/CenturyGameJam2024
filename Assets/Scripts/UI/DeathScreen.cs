@@ -33,6 +33,7 @@ public class DeathScreen : MonoBehaviour
 
     private void OnEnable()
     {
+        GameEvents.onAllRelicsCollected += OnAllRelicsCollected;
         GameEvents.onPlayerDeath += EnableScreen;
         restartBtn.onClick.AddListener(Restart);
         menuBtn.onClick.AddListener(Menu);
@@ -41,6 +42,7 @@ public class DeathScreen : MonoBehaviour
 
     private void OnDisable()
     {
+        GameEvents.onAllRelicsCollected -= OnAllRelicsCollected;
         GameEvents.onPlayerDeath -= EnableScreen;
         restartBtn.onClick.RemoveAllListeners();
         menuBtn.onClick.RemoveAllListeners();
@@ -97,5 +99,19 @@ public class DeathScreen : MonoBehaviour
     {
         SceneManager.LoadSceneAsync((int)Globals.SceneIndex.MainMenu, LoadSceneMode.Single);
         GameManager.Instance.currentScene = Globals.SceneIndex.MainMenu;
+    }
+
+
+    private void OnAllRelicsCollected()
+    {
+        GameEvents.onPlayerDeath -= EnableScreen;
+        youDied.SetActive(true);
+        hearts.SetActive(false);
+
+        // Change Video Player video clip
+        // 
+
+        // Change Title txt
+        // textmeshproGO.text = "YOU WIN";
     }
 }
