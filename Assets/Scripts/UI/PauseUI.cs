@@ -13,7 +13,7 @@ public class PauseUI : UIBase
 
     private void OnEnable()
     {
-        UIEvents.onTogglePause += Toggle;
+        // UIEvents.onTogglePause += Toggle;
         resumeBtn.onClick.AddListener(Resume);
         restartBtn.onClick.AddListener(Restart);
         menuBtn.onClick.AddListener(ReturnToMenu);
@@ -22,10 +22,24 @@ public class PauseUI : UIBase
 
     private void OnDisable()
     {
-        UIEvents.onTogglePause -= Toggle;
+        // UIEvents.onTogglePause -= Toggle;
         resumeBtn.onClick.RemoveAllListeners();
         restartBtn.onClick.RemoveAllListeners();
         menuBtn.onClick.RemoveAllListeners();
+    }
+
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape)) ToggleUI();
+    }
+
+
+    private void ToggleUI()
+    {
+        isToggled = !isToggled;
+        canvasGroup.alpha = isToggled ? 1f : 0f;
+        canvasGroup.blocksRaycasts = isToggled;
     }
 
 
@@ -39,15 +53,19 @@ public class PauseUI : UIBase
 
     private void Resume()
     {
-        isToggled = false;
-        canvasGroup.alpha = 0f;
-        canvasGroup.blocksRaycasts = false;
+        // isToggled = false;
+        // canvasGroup.alpha = 0f;
+        // canvasGroup.blocksRaycasts = false;
+        ToggleUI();
     }
 
 
     private void Restart()
     {
-
+        GameManager.Instance.gameData = new();
+        EnemyManager.Instance.enemyList = new();
+        SceneManager.LoadSceneAsync((int)Globals.SceneIndex.Game, LoadSceneMode.Single);
+        GameManager.Instance.currentScene = Globals.SceneIndex.Game;
     }
 
 

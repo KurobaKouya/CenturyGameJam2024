@@ -5,19 +5,19 @@ using UnityEngine.Pool;
 
 public class EnemyManager : Singleton<EnemyManager>
 {
-    [SerializeField] private List<Enemy> enemyList = new();
+    [SerializeField] public List<Enemy> enemyList = new();
     [SerializeField] private GameObject enemyPrefab;
     
 
-    public void Init()
+    private void OnEnable()
     {
         enemyPrefab = Resources.Load<GameObject>("Prefabs/Enemy");
     }
 
 
-    public void UpdateLoop()
+    private void Update()
     {
-        if (GameManager.Instance.currentScene != Globals.SceneIndex.Game) return;
+        if (!GameManager.Instance.player) return;
         SpawnEnemies();
 
         foreach (Enemy en in enemyList) 

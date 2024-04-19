@@ -27,6 +27,7 @@ public class MainMenu : MonoBehaviour
     private void StartGame()
     {
         // Switch to Menu/Game Scene
+        GameManager.Instance.gameData = new();
         SceneManager.LoadSceneAsync((int)Globals.SceneIndex.Game, LoadSceneMode.Single);
         GameManager.Instance.currentScene = Globals.SceneIndex.Game;
     }

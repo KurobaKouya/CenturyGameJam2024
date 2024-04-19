@@ -633,7 +633,6 @@ GameObject:
   - component: {fileID: 1312766852}
   - component: {fileID: 1312766853}
   - component: {fileID: 1312766851}
-  - component: {fileID: 1312766854}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -680,6 +679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d949377dcccebc640add31bf3a2b8de7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentScene: 0
   gameData:
     relicsCollected: 0
     lives: 5
@@ -688,23 +688,18 @@ MonoBehaviour:
     itemInHand: -1
     relicInInventory: 0
     inkAmount: 0
+    playerFog:
+      position: {x: 0, y: 0, z: 0}
+      levelCoordinates: {x: 0, y: 0}
+      startSize: 0
+      timeBeforeDecay: 0
+      decayTime: 0
+      currentSize: 0
+      time: 0
+      gameObject: {fileID: 0}
+      noDecay: 0
   flashlightToggled: 0
   inUnknown: 0
---- !u!114 &1312766854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1312766850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0314931ff4be2df4497c7f907125418b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyList: []
-  enemyCount: 0
-  enemyPrefab: {fileID: 8807826560730098131, guid: 18ef126c2c8a5b54e928b090f3870bd6, type: 3}
 --- !u!1 &1673541364
 GameObject:
   m_ObjectHideFlags: 0

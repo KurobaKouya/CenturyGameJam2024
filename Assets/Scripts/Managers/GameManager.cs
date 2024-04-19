@@ -18,6 +18,7 @@ public class GameManager : Singleton<GameManager>
 
     public void UpdateLoop()
     {
+        if (currentScene != Globals.SceneIndex.Game) return;
         if (player) player.UpdateLoop();
         /*if (flashlightToggled) */UpdatePlayerStats();
     }

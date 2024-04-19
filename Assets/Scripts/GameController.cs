@@ -7,7 +7,6 @@ public class GameController : MonoBehaviour
 {
     private GameManager gameManager;
     private InputManager inputManager;
-    private EnemyManager enemyManager;
 
 
     private void Awake()
@@ -18,14 +17,12 @@ public class GameController : MonoBehaviour
         // Obtain references
         gameManager = GetComponentInChildren<GameManager>();
         inputManager = GetComponentInChildren<InputManager>();
-        enemyManager = GetComponentInChildren<EnemyManager>();
 
 
         // Initialize
         // ...
         gameManager.Init();
         inputManager.Init();
-        enemyManager.Init();
 
 
 
@@ -39,6 +36,5 @@ public class GameController : MonoBehaviour
     {
         gameManager.UpdateLoop();
         inputManager.UpdateLoop();
-        enemyManager.UpdateLoop();
     }
 }

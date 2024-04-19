@@ -23,6 +23,7 @@ public class StaminaBar : MonoBehaviour
     private void Update()
     {
         if (GameManager.Instance.currentScene != Globals.SceneIndex.Game) return;
+        if (!GameManager.Instance.player) return;
         if (mask == null) return;
 
         mask.fillAmount = GameManager.Instance.player.stamina / 100;
