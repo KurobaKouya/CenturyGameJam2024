@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private Button StartBtn;
     [SerializeField] private Button TutBtn;
     [SerializeField] private Button QuitBtn;
+    [SerializeField] private Tutorial tutGO;
     
     private void OnEnable()
     {
@@ -35,7 +36,7 @@ public class MainMenu : MonoBehaviour
 
     private void ToggleTutorial()
     {
-
+        tutGO.Toggle();
     }
 
 
