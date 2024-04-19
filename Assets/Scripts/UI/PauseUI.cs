@@ -50,6 +50,7 @@ public class PauseUI : MonoBehaviour
         // canvasGroup.blocksRaycasts = isToggled;
         // canvasGroup.interactable = isToggled;
         holder.SetActive(!holder.activeInHierarchy);
+        Time.timeScale = holder.activeInHierarchy ? 0f : 1f;
     }
 
 

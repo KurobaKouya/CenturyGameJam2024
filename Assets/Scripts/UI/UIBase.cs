@@ -20,18 +20,18 @@ public class UIBase : MonoBehaviour
     public virtual void Toggle() 
     {
         isToggled = !isToggled;
-        // Time.timeScale = isToggled ? 0f : 1f;
         canvasGroup.alpha = isToggled ? 1f : 0f;
         canvasGroup.blocksRaycasts = isToggled;
         canvasGroup.interactable = isToggled;
+        Time.timeScale = isToggled ? 0f : 1f;
     }
 
     public virtual void SetActive(bool state)
     {
         isToggled = state;
-        // Time.timeScale = isToggled ? 0f : 1f;
         canvasGroup.alpha = isToggled ? 1f : 0f;
         canvasGroup.blocksRaycasts = isToggled;
         canvasGroup.interactable = isToggled;
+        Time.timeScale = isToggled ? 0f : 1f;
     }
 }
