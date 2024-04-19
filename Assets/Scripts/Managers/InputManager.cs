@@ -22,6 +22,7 @@ public class InputManager : MonoBehaviour
     {
         Vector2 movementDir = playerInput.Controls.Movement.ReadValue<Vector2>();  
         player.movementDir = movementDir;
+        Debug.Log("a" + player.movementDir);
 
         // Enabling sprint
         // ...
@@ -52,14 +53,14 @@ public class InputManager : MonoBehaviour
 
     public void Init()
     {
-        playerInput = new();
+        playerInput = new PlayerInput();
         playerInput.Enable();
     }
 
 
     private void OnDestroy()
     {
-        playerInput.Disable();
+        playerInput?.Disable();
     }
 
     #region GlobalEvents

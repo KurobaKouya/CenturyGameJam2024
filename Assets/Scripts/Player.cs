@@ -48,7 +48,7 @@ public class Player : MonoBehaviour
     {
         // Movement
         rb.velocity = new Vector3(movementDir.x * movementSpeed, 0, movementDir.y * movementSpeed);
-
+        Debug.Log("velocity" + rb.velocity);
         // Rotation
         LookAtCursor();
 
