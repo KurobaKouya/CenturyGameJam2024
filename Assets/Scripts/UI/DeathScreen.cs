@@ -41,7 +41,7 @@ public class DeathScreen : MonoBehaviour
 
     IEnumerator UpdateScreen()
     {
-        yield return null;
+        yield return new WaitForSeconds(1);
         switch (GameManager.Instance.gameData.lives)
         {
             case 2:
