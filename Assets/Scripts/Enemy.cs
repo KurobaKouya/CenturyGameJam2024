@@ -42,7 +42,7 @@ public class Enemy : MonoBehaviour
         // Check for sight range
         playerInSightRange = Physics.CheckSphere(transform.position, Globals.monsterSightRange, playerLayerMask);
 
-        if (!playerInSightRange) Patrol();
+        if (!playerInSightRange || inLight) Patrol();
         else if (!inLight) Chase();
     }
 
@@ -69,7 +69,7 @@ public class Enemy : MonoBehaviour
     {
         if (other.CompareTag("SafeZone")) 
         {
-            walkPoint = transform.position - agent.destination;
+            walkPoint = -agent.destination * 3f;
             if (agent.isOnNavMesh) agent.SetDestination(walkPoint);
         }
         else if (other.CompareTag("Player") && health > 0) 
