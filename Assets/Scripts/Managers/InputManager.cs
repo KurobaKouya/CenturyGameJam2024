@@ -21,8 +21,9 @@ public class InputManager : MonoBehaviour
     private void UpdatePlayerInput()
     {
         Vector2 movementDir = playerInput.Controls.Movement.ReadValue<Vector2>();  
-        player.movementDir = movementDir;
-        Debug.Log("a" + player.movementDir);
+
+        player.movementDir = GameManager.Instance.inMap ? Vector2.zero : movementDir;
+        
 
         // Enabling sprint
         // ...

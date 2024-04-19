@@ -1,11 +1,11 @@
 public class Globals
 {
-    public static int playerHealth = 100;
+    public static float playerHealth = 100;
     public static int playerDmg = 10;
     public static float playerMovementSpeed = 10f;
     public static float sprintMovementSpeed = 20f;
-    public static float healthRegen = 5f;
-    public static float healthDrainSpeed = 5.0f;
+    public static float healthRegen = 0f;
+    public static float healthDrainSpeed = 1f;
 
     public  static float attackStaminaDrain = 15f;
     public static float sprintStaminaDrain = 5f;
@@ -20,7 +20,7 @@ public class Globals
     public static float inkPerDistance = 0.5f;
 
 
-    public static int monsterHealth = 20;
+    public static int monsterHealth = 10;
     public static int monsterDmg = 20;
     public static float monsterSightRange = 10f;
     public static float monsterPatrolRange = 10f;

@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.PlayerSettings;
 
 [Serializable]
 public class NoFogPosition
@@ -14,11 +15,12 @@ public class NoFogPosition
     public float time;
     public GameObject gameObject;
     public bool noDecay = false;
+    public bool updatePos = false;
     public NoFogPosition()
     {
 
     }
-    public NoFogPosition(Vector3 pos, float startSize, float timeBeforeDecay, float decayTime, GameObject gameObject = null, bool noDecay = false)
+    public NoFogPosition(Vector3 pos, float startSize, float timeBeforeDecay, float decayTime, GameObject gameObject = null, bool noDecay = false, bool updatePos = false)
     {
         position = pos;
         this.startSize = startSize;
@@ -28,11 +30,12 @@ public class NoFogPosition
         time -= timeBeforeDecay;
         this.gameObject = gameObject;
         this.noDecay = noDecay;
-        
+        this.updatePos = updatePos;
     }
 
     public void ResetTime()
     {
+        time = 0;
         time -= timeBeforeDecay;
     }
 }
@@ -79,6 +82,7 @@ public class MinimapToFog : MonoBehaviour
         }
 
     }
+
     public void AddNoFog(NoFogPosition noFogPosition)
     {
         noFog.Add(noFogPosition);
@@ -97,11 +101,15 @@ public class MinimapToFog : MonoBehaviour
         for (int i = noFog.Count - 1; i >= 0; i--)
         {
             var item = noFog[i];
-            if (item.noDecay) continue;
-            item.time += Time.deltaTime / item.decayTime;
+            if (!item.noDecay)
+            {
+                item.time += Time.deltaTime / item.decayTime;
+            }
+            if (item.updatePos)
+                item.levelCoordinates = fogWar.GetLevelCoordinates(item.position);
             fogWar.CreateSightFromPos(item.levelCoordinates, item.currentSize);
             
-
+            
             if (item.time > 1)
             {
                 objectPool.DestroyObject(item.gameObject);

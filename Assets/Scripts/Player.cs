@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
         InputEvents.onToggleSprint += (bool enable) => isSprinting = enable;
         InputEvents.onPlayerAttack += Attack;
         //set player light
-        GameManager.Instance.gameData.playerFog = new NoFogPosition(transform.position, lightRadius, 0, GameManager.Instance.gameData.playerHealth / Globals.healthDrainSpeed, null, true);
+        GameManager.Instance.gameData.playerFog = new NoFogPosition(transform.position, lightRadius, 0, Globals.playerHealth / Globals.healthDrainSpeed, null, true, true);
         
         FindObjectOfType<MinimapToFog>().AddNoFog(GameManager.Instance.gameData.playerFog);
         if (!rb) rb = GetComponent<Rigidbody>();
@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
     {
         InputEvents.onToggleSprint -= (bool enable) => isSprinting = enable;
         InputEvents.onPlayerAttack -= Attack;
-        FindObjectOfType<MinimapToFog>().RemoveNoFog(GameManager.Instance.gameData.playerFog);
+        FindObjectOfType<MinimapToFog>().RemoveNoFog(GameManager.Instance?.gameData.playerFog);
     }
 
 
@@ -48,7 +48,6 @@ public class Player : MonoBehaviour
     {
         // Movement
         rb.velocity = new Vector3(movementDir.x * movementSpeed, 0, movementDir.y * movementSpeed);
-        Debug.Log("velocity" + rb.velocity);
         // Rotation
         LookAtCursor();
 
@@ -62,20 +61,23 @@ public class Player : MonoBehaviour
     //player light
     void UpdateLight()
     {
+        Debug.Log("PlayerLight1" + GameManager.Instance.gameData.playerFog.time + " / " + Globals.playerHealth / Globals.healthDrainSpeed);
+        Debug.Log("PlayerLight2: " + GameManager.Instance.gameData.playerFog.currentSize);
+        Debug.Log("PlayerLight3: " + GameManager.Instance.gameData.playerFog.position + " " + transform.position);
         GameManager.Instance.gameData.playerFog.position = transform.position;
-        flashlight.gameObject.SetActive(GameManager.Instance.gameData.flashlightPower > 0);
-        if (GameManager.Instance.gameData.flashlightPower <= 0)
+        
+        flashlight.gameObject.SetActive(GameManager.Instance.flashlightToggled);
+        if (GameManager.Instance.inUnknown)
         {
-            
-            if (GameManager.Instance.inUnknown)
+            if (!GameManager.Instance.flashlightToggled)
             {
                 GameManager.Instance.gameData.playerFog.noDecay = false;
             }
-            else
-            {
-                GameManager.Instance.gameData.playerFog.noDecay = true;
-                GameManager.Instance.gameData.playerFog.ResetTime();
-            }
+        }
+        else
+        {
+            GameManager.Instance.gameData.playerFog.noDecay = true;
+            GameManager.Instance.gameData.playerFog.ResetTime();
         }
     }
     private void UpdateStamina()
@@ -123,7 +125,12 @@ public class Player : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("SafeZone")) GameManager.Instance.inUnknown = false;
+        if (other.CompareTag("SafeZone"))
+        {
+            GameManager.Instance.inUnknown = false;
+            GameManager.Instance.gameData.playerHealth = Globals.playerHealth;
+            GameManager.Instance.gameData.playerFog.ResetTime();
+        }
         else GameManager.Instance.inUnknown = true;
     }
 
@@ -142,5 +149,10 @@ public class Player : MonoBehaviour
 
             // transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(pointToLook), 0.5f * Time.deltaTime);
         }
+    }
+
+    public void ResetPlayerStats()
+    {
+        GameManager.Instance.gameData.playerFog.ResetTime();
     }
 }

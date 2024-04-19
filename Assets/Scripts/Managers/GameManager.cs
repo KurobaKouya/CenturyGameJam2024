@@ -8,7 +8,7 @@ public class GameManager : Singleton<GameManager>
     [HideInInspector] public Player player { get; private set; }
     [HideInInspector] public bool flashlightToggled = false;
     [HideInInspector] public bool inUnknown = false;
-
+    [HideInInspector] public bool inMap = false;
 
     public void Init()
     {
@@ -46,13 +46,14 @@ public class GameManager : Singleton<GameManager>
         // Health
         // ...
         if (!flashlightToggled)
-            gameData.playerHealth = Globals.healthDrainSpeed * Time.deltaTime;
+            gameData.playerHealth -= Globals.healthDrainSpeed * Time.deltaTime;
         gameData.playerHealth += Globals.healthRegen * Time.deltaTime;
         gameData.playerHealth = Mathf.Clamp(gameData.playerHealth, 0, 100);
 
         //Ink
         //
         gameData.inkAmount = Mathf.Clamp(gameData.inkAmount, 0, Globals.maxInk);
+        Debug.Log("Ink: " + gameData.inkAmount);
     }
 
 
@@ -70,7 +71,7 @@ public class GameManager : Singleton<GameManager>
         {
             gameData.playerHealth -= Globals.monsterDmg;
             //player fog is lerped, so need to scale accordingly to how much time left
-            gameData.playerFog.time -= Globals.monsterDmg * Globals.healthDrainSpeed;
+            gameData.playerFog.time += Globals.monsterDmg / Globals.playerHealth;
         }
 
         gameData.flashlightPower = Mathf.Clamp(gameData.flashlightPower, 0, 100);

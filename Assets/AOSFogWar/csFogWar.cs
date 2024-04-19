@@ -432,7 +432,7 @@ namespace FischlWorks_FogWar
 
             foreach (FogRevealer fogRevealer in fogRevealers)
             {
-                if (fogRevealer._UpdateOnlyOnMove == false || !fogRevealer._RevealerTransform.gameObject.activeInHierarchy)
+                if (fogRevealer._UpdateOnlyOnMove == false)
                 {
                     break;
                 }
@@ -465,6 +465,9 @@ namespace FischlWorks_FogWar
 
             foreach (FogRevealer fogRevealer in fogRevealers)
             {
+                if (!fogRevealer._RevealerTransform.gameObject.activeInHierarchy)
+                    continue;
+
                 fogRevealer.GetCurrentLevelCoordinates(this);
 
                 shadowcaster.ProcessLevelData(

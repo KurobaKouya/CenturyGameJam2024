@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5329198693741384634}
   - component: {fileID: 4755189530995205552}
   - component: {fileID: 6006663717861662337}
-  - component: {fileID: 797349403016755321}
   m_Layer: 0
   m_Name: Flashlight
   m_TagString: Untagged
@@ -86,27 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &797349403016755321
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 119538902455107680}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &141290230875568430
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,7 +143,7 @@ MonoBehaviour:
   stamina: 100
   attackHitBox: {fileID: 9125992878563387074}
   flashlight: {fileID: 119538902455107680}
-  lightRadius: 0
+  lightRadius: 5
   animator: {fileID: 740988823271992168}
 --- !u!136 &3993713004491056155
 CapsuleCollider:
@@ -426,7 +404,6 @@ GameObject:
   - component: {fileID: 7331122855555309723}
   - component: {fileID: 7348021836582604080}
   - component: {fileID: 5037605444368060584}
-  - component: {fileID: 4044653045711903994}
   m_Layer: 0
   m_Name: Sphere (1)
   m_TagString: Untagged
@@ -500,27 +477,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &4044653045711903994
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3773874461366343119}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3961998746163860935
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,7 +486,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8473341765658135156}
-  - component: {fileID: 5741860005548733740}
   - component: {fileID: 7518029678523396531}
   m_Layer: 0
   m_Name: Flashlight Light
@@ -554,29 +509,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5329198693741384634}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5741860005548733740
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3961998746163860935}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Version: 3
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_RenderingLayers: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_ShadowRenderingLayers: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
-  m_SoftShadowQuality: 0
 --- !u!108 &7518029678523396531
 Light:
   m_ObjectHideFlags: 0
@@ -584,7 +516,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3961998746163860935}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
@@ -1192,8 +1124,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 2.1584735}
+  m_Center: {x: 0, y: 0, z: 0.57923675}
 --- !u!114 &9125992878563387074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1519,7 +1451,6 @@ GameObject:
   - component: {fileID: 6537166684298330647}
   - component: {fileID: 2830837281127610515}
   - component: {fileID: 2404898192423426668}
-  - component: {fileID: 9150147678876936761}
   m_Layer: 0
   m_Name: Sphere (2)
   m_TagString: Untagged
@@ -1592,24 +1523,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &9150147678876936761
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8170139662721880232}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}

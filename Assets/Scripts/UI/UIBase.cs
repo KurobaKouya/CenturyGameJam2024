@@ -25,4 +25,13 @@ public class UIBase : MonoBehaviour
         canvasGroup.blocksRaycasts = isToggled;
         canvasGroup.interactable = isToggled;
     }
+
+    public virtual void SetActive(bool state)
+    {
+        isToggled = state;
+        // Time.timeScale = isToggled ? 0f : 1f;
+        canvasGroup.alpha = isToggled ? 1f : 0f;
+        canvasGroup.blocksRaycasts = isToggled;
+        canvasGroup.interactable = isToggled;
+    }
 }
