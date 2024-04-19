@@ -14,17 +14,20 @@ public class Enemy : MonoBehaviour
     private Vector3 walkPoint;
     private bool walkPointSet;
     private bool playerInSightRange;
-    private bool inLight;
+    [SerializeField]private bool inLight;
 
     [Header("Variables")]
     public Transform mesh;
-    public int health = Globals.monsterHealth;
+    public float health = Globals.monsterHealth;
     public int inkAmount = 10;
     public bool isDead = false;
+    [SerializeField]private float deathTimer = 2f;
 
     public void Init()
     {
         isDead = false;
+        inLight = false;
+        deathTimer = 2f;
         StopAllCoroutines();
         mesh.localPosition = Vector3.zero;
         health = Globals.monsterHealth;
@@ -37,7 +40,7 @@ public class Enemy : MonoBehaviour
     public void UpdateLoop()
     {
         if (health <= 0) StartCoroutine(Die());
-
+        if (deathTimer <= 0f) StartCoroutine(DieFromLight());
 
         // Check for sight range
         playerInSightRange = Physics.CheckSphere(transform.position, Globals.monsterSightRange, playerLayerMask);
@@ -69,7 +72,7 @@ public class Enemy : MonoBehaviour
     {
         if (other.CompareTag("SafeZone")) 
         {
-            walkPoint = -agent.destination * 3f;
+            walkPoint = transform.position - agent.destination * 5f;
             if (agent.isOnNavMesh) agent.SetDestination(walkPoint);
         }
         else if (other.CompareTag("Player") && health > 0) 
@@ -84,7 +87,6 @@ public class Enemy : MonoBehaviour
     {
         if (other.CompareTag("SafeZone")) 
         {
-            if (inLight) return;
             StartCoroutine(LoseAggro());
         }
     }
@@ -93,9 +95,15 @@ public class Enemy : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("SafeZone"))
+        {
+            deathTimer -= Time.deltaTime;
             inLight = true;
+        }
         else
-            StartCoroutine(LoseAggro());
+        {
+            deathTimer += 0.25f * Time.deltaTime;
+            deathTimer = Mathf.Clamp(deathTimer, -1, 2f);
+        }
     }
 
 
@@ -111,7 +119,7 @@ public class Enemy : MonoBehaviour
 
     IEnumerator LoseAggro()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         inLight = false;
     }
 
@@ -137,6 +145,14 @@ public class Enemy : MonoBehaviour
     IEnumerator Die()
     {
         GameManager.Instance.gameData.inkAmount += inkAmount;
+        mesh.localPosition = new(0, mesh.localPosition.y - 5 * Time.deltaTime, 0);
+        yield return new WaitForSeconds(0.5f);
+        isDead = true;
+    }
+
+
+    IEnumerator DieFromLight()
+    {
         mesh.localPosition = new(0, mesh.localPosition.y - 5 * Time.deltaTime, 0);
         yield return new WaitForSeconds(0.5f);
         isDead = true;
