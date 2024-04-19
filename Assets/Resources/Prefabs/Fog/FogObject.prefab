@@ -79,7 +79,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   ignoreTriggers: 0
-  drawGizmos: 1
+  drawGizmos: 0
   LogOutOfRange: 0
   onUpdateField:
     m_PersistentCalls:

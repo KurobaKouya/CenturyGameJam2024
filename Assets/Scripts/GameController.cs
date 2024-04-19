@@ -5,15 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
+    public static GameController instance;
     private GameManager gameManager;
     private InputManager inputManager;
 
 
     private void Awake()
     {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         // Persist through scenes
         DontDestroyOnLoad(this);
-
         // Obtain references
         gameManager = GetComponentInChildren<GameManager>();
         inputManager = GetComponentInChildren<InputManager>();
@@ -27,8 +37,8 @@ public class GameController : MonoBehaviour
 
 
         // Switch to Menu/Game Scene
-        SceneManager.LoadSceneAsync((int)Globals.SceneIndex.MainMenu, LoadSceneMode.Single);
-        GameManager.Instance.currentScene = Globals.SceneIndex.MainMenu;
+        //SceneManager.LoadSceneAsync((int)Globals.SceneIndex.MainMenu, LoadSceneMode.Single);
+        //GameManager.Instance.currentScene = Globals.SceneIndex.MainMenu;
     }
 
 
