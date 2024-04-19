@@ -54,9 +54,14 @@ public class MinimapToFog : MonoBehaviour
 
     List<NoFogPosition> noFog = new List<NoFogPosition>();
     // Start is called before the first frame update
+    private void Awake()
+    {
+        if (instance == null)
+            instance = this;
+    }
     void Start()
     {
-        instance = this;
+        
         controller.onClickOnMinimap.AddListener(OnClickMap);
         fogWar.onUpdateField.AddListener(OnUpdate);
         controller.onPointerUpMinimap.AddListener(OnPointerUpMap);
@@ -69,7 +74,8 @@ public class MinimapToFog : MonoBehaviour
         {
             NoFogPosition pos = new NoFogPosition(position, startSize, timeBeforeDecay, decayTime, objectPool.InstantiateObject(new Vector3(position.x, 0, position.z)));
             pos.levelCoordinates = fogWar.GetLevelCoordinates(pos.position);
-            pos.gameObject.transform.localScale = new Vector3(pos.currentSize, pos.currentSize, pos.currentSize);
+            if (gameObject)
+                pos.gameObject.transform.localScale = new Vector3(pos.currentSize, pos.currentSize, pos.currentSize);
             noFog.Add(pos);
             GameManager.Instance.gameData.inkAmount -= Vector2.Distance(position, controller.prevLocation) * Globals.inkPerDistance;
             isDrawing = true;
