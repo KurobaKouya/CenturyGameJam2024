@@ -24,6 +24,9 @@ public class AudioClipInstance
     public float pitchMinRange = 1;
     public float pitchMaxRange = 1;
 
+    [Header("StartTime")]
+    public float startTime = 0;
+
     public float RandomVolume()
     {
         return UnityEngine.Random.Range(volumeMinRange, volumeMaxRange);
@@ -46,7 +49,7 @@ public class AudioManager : MonoBehaviour
     int poolAmount = 20;
     ObjectPool<AudioSource> pool;
 
-    [SerializeField] List<AudioClipInstance> allClips = new List<AudioClipInstance>();
+    
 
 
     [SerializeField] int maxSameAudioPlaying = 10;
@@ -133,11 +136,11 @@ public class AudioManager : MonoBehaviour
     /// </summary>
     /// <param name="clipInstance"></param>
     /// <returns></returns>
-    public void PlaySourceAudio(string nameOfClip, Vector3 pos = new Vector3())
+    public void PlaySourceAudio(AudioClipInstance clipInstance, Vector3 pos = new Vector3())
     {
 
         AudioSource aud;
-        AudioClipInstance clipInstance = GetClip(nameOfClip);
+        //AudioClipInstance clipInstance = /*GetClip(nameOfClip);*/
         if (clipInstance == null)
             Debug.LogError("Cannot find audio clip!");
         //stop oldest to prevent too many clips playing at once
@@ -148,22 +151,23 @@ public class AudioManager : MonoBehaviour
         aud = pool.Get();
         aud.clip = clipInstance.audioClip;
         //get number of same clip audiosources playing and divide to reduce loudness
-        aud.volume = clipInstance.RandomVolume() /** GameManager.Instance.gameData.soundIntensity /*/ * (float) oldestAudioSource.Item2;
+        aud.volume = clipInstance.RandomVolume() /** GameManager.Instance.gameData.soundIntensity /*/;
         aud.pitch = clipInstance.RandomPitch();
         aud.transform.position = pos;
+        aud.time = clipInstance.startTime;
         aud.Play();
         StartCoroutine(DisableSource(aud, aud.clip.length / aud.pitch + 0.1f));
         
     }
 
-    AudioClipInstance GetClip(string name)
-    {
-        for (int i = 0; i < allClips.Count; i++)
-        {
-            if (allClips[i].name == name) return allClips[i];
-        }
-        return null;
-    }
+    //AudioClipInstance GetClip(string name)
+    //{
+    //    for (int i = 0; i < allClips.Count; i++)
+    //    {
+    //        if (allClips[i].name == name) return allClips[i];
+    //    }
+    //    return null;
+    //}
     (AudioSource, int) GetOldestIfTooManySimilar(AudioClipInstance clip)
     {
         int count = 0;
@@ -205,11 +209,7 @@ public class AudioManager : MonoBehaviour
 
     }
 
-    [ContextMenu("TestAud")]
-    void TestAudio()
-    {
-        PlaySourceAudio(testClip.name);
-    }
+
 
 
 

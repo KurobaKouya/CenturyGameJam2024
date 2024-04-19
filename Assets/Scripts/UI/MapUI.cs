@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class MapUI : UIBase
 {
     [SerializeField] Slider slider;
+    [SerializeField] AudioClipInstance openMapAud, closeMapAud;
 
 
     private void OnEnable()
@@ -24,6 +25,7 @@ public class MapUI : UIBase
     {
         base.Toggle();
         GameManager.Instance.inMap = isToggled;
+        AudioManager.instance.PlaySourceAudio(isToggled ? openMapAud : closeMapAud);
     }
     void DisableMap()
     {

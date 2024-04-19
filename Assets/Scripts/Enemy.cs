@@ -22,6 +22,9 @@ public class Enemy : MonoBehaviour
     public int inkAmount = 10;
     public bool isDead = false;
 
+    [Header("SFX")]
+    [SerializeField] AudioClipInstance deathSFX;
+
     public void Init()
     {
         isDead = false;
@@ -136,9 +139,10 @@ public class Enemy : MonoBehaviour
 
     IEnumerator Die()
     {
+        isDead = true;
         GameManager.Instance.gameData.inkAmount += inkAmount;
         mesh.localPosition = new(0, mesh.localPosition.y - 5 * Time.deltaTime, 0);
+        AudioManager.instance.PlaySourceAudio(deathSFX);
         yield return new WaitForSeconds(0.5f);
-        isDead = true;
     }
 }

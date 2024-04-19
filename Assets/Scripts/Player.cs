@@ -13,9 +13,14 @@ public class Player : MonoBehaviour
     public float stamina = 100f;
     private bool canRegenStamina = true;
     private bool canAttack = true;
+
     [SerializeField] private AttackHitBox attackHitBox = null;
+    [SerializeField] private CameraShakeEvent vfx;
     [SerializeField] GameObject flashlight;
     public float lightRadius;
+
+    [Header("SFX")]
+    [SerializeField] AudioClipInstance swingAud;
 
     
 
@@ -57,8 +62,6 @@ public class Player : MonoBehaviour
         // Light
         UpdateLight();
 
-        //Weapon
-        UpdateWeapon();
 
         //while in light
         WhileInLight();
@@ -133,6 +136,23 @@ public class Player : MonoBehaviour
         canAttack = true;
         canRegenStamina = true;
     }
+
+    //Axe swing
+    public void SwingStart(bool state)
+    {
+        Debug.Log("AAA " + state);
+        attackHitBox.gameObject.SetActive(state);
+        
+        if (state)
+        {
+            AudioManager.instance.PlaySourceAudio(swingAud, transform.position);
+            vfx.Shake();
+        }
+    
+
+    }
+
+
 
 
     public void OnTriggerEnter(Collider other)

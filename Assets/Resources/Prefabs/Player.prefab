@@ -142,8 +142,18 @@ MonoBehaviour:
   isSprinting: 0
   stamina: 100
   attackHitBox: {fileID: 9125992878563387074}
+  vfx: {fileID: 8554638512597163425}
   flashlight: {fileID: 119538902455107680}
   lightRadius: 5
+  swingAud:
+    name: 
+    audioClip: {fileID: 8300000, guid: 1024bd8fbf052f444a237e254f690f66, type: 3}
+    bypassLimit: 0
+    volumeMinRange: 1
+    volumeMaxRange: 1
+    pitchMinRange: 1.1
+    pitchMaxRange: 0.8
+    startTime: 0.2
   animator: {fileID: 8600888267458058005}
 --- !u!136 &3993713004491056155
 CapsuleCollider:
@@ -924,6 +934,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -312558492793154872, guid: 0da9b1867387d904ca0165c14bd61cd0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 18.387142
+      objectReference: {fileID: 0}
+    - target: {fileID: -312558492793154872, guid: 0da9b1867387d904ca0165c14bd61cd0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 63.553947
+      objectReference: {fileID: 0}
+    - target: {fileID: -312558492793154872, guid: 0da9b1867387d904ca0165c14bd61cd0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 11.156873
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0da9b1867387d904ca0165c14bd61cd0, type: 3}
       propertyPath: m_Name
       value: CharacterAtkAnim1(4)
@@ -961,9 +983,9 @@ MonoBehaviour:
     unityEvent:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 7160184231958116946}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
+        - m_Target: {fileID: -3244767139026760824}
+          m_TargetAssemblyTypeName: Player, Assembly-CSharp
+          m_MethodName: SwingStart
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -973,25 +995,13 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-        - m_Target: {fileID: 8554638512597163425}
-          m_TargetAssemblyTypeName: CameraShakeEvent, Assembly-CSharp
-          m_MethodName: Shake
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
   - name: OnSwingEnd
     unityEvent:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 7160184231958116946}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
+        - m_Target: {fileID: -3244767139026760824}
+          m_TargetAssemblyTypeName: Player, Assembly-CSharp
+          m_MethodName: SwingStart
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

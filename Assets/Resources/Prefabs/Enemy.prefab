@@ -167,6 +167,15 @@ MonoBehaviour:
   health: 20
   inkAmount: 10
   isDead: 0
+  deathSFX:
+    name: 
+    audioClip: {fileID: 8300000, guid: 25e0207c9f7eb8f4eb6a150f876d2e6f, type: 3}
+    bypassLimit: 0
+    volumeMinRange: 0.7
+    volumeMaxRange: 0.7
+    pitchMinRange: 0.9
+    pitchMaxRange: 1.1
+    startTime: 0
 --- !u!54 &603866042993301209
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -251,4 +260,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fogWar: {fileID: 0}
   visibility: 0
-  additionalRadius: 0
+  additionalRadius: 2
