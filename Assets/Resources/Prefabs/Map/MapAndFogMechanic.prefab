@@ -123,6 +123,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4906111897340099130}
     - target: {fileID: 8564996603352531400, guid: 9397d0b0cfe71cd41a4ff4436efba045, type: 3}
+      propertyPath: levelDimensionX
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564996603352531400, guid: 9397d0b0cfe71cd41a4ff4436efba045, type: 3}
+      propertyPath: levelDimensionY
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564996603352531400, guid: 9397d0b0cfe71cd41a4ff4436efba045, type: 3}
       propertyPath: fogRevealers.Array.size
       value: 5
       objectReference: {fileID: 0}

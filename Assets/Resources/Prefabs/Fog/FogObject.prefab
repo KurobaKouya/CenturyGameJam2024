@@ -71,7 +71,7 @@ MonoBehaviour:
   levelNameToSave: Default
   levelDimensionX: 100
   levelDimensionY: 100
-  unitScale: 1
+  unitScale: 0.25
   scanSpacingPerUnit: 0.5
   rayStartHeight: 5
   rayMaxDistance: 10

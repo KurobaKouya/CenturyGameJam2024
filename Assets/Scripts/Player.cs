@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     public float lightRadius;
 
     [Header("SFX")]
-    [SerializeField] AudioClipInstance swingAud;
+    [SerializeField] AudioClipInstance hurtSFX, swingAud, noStaminaAud;
 
     
 
@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
         InputEvents.onPlayerAttack += Attack;
         //set player light
         GameManager.Instance.gameData.playerFog = new NoFogPosition(transform.position, lightRadius, 0, Globals.playerHealth / Globals.healthDrainSpeed, null, true, true);
-        
+        GameEvents.onPlayerHit += () => AudioManager.instance.PlaySourceAudio(hurtSFX);
         FindObjectOfType<MinimapToFog>().AddNoFog(GameManager.Instance.gameData.playerFog);
         if (!rb) rb = GetComponent<Rigidbody>();
     }
@@ -45,6 +45,7 @@ public class Player : MonoBehaviour
     {
         InputEvents.onToggleSprint -= (bool enable) => isSprinting = enable;
         InputEvents.onPlayerAttack -= Attack;
+        GameEvents.onPlayerHit -= () => AudioManager.instance.PlaySourceAudio(hurtSFX); 
         FindObjectOfType<MinimapToFog>().RemoveNoFog(GameManager.Instance?.gameData.playerFog);
     }
 

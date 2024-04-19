@@ -106,8 +106,7 @@ public class MinimapToFog : MonoBehaviour
             {
                 item.time += Time.deltaTime / item.decayTime;
             }
-            if (item.updatePos)
-                item.levelCoordinates = fogWar.GetLevelCoordinates(item.position);
+            item.levelCoordinates = fogWar.GetLevelCoordinates(item.position);
             fogWar.CreateSightFromPos(item.levelCoordinates, item.currentSize);
             
             

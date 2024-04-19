@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
     [SerializeField]private float deathTimer = 2f;
 
     [Header("SFX")]
-    [SerializeField] AudioClipInstance deathSFX;
+    [SerializeField] AudioClipInstance hurtSFX, deathSFX;
 
     public void Init()
     {
@@ -130,7 +130,8 @@ public class Enemy : MonoBehaviour
     public void TakeDamage() => StartCoroutine(TakeDamageCoroutine());
     IEnumerator TakeDamageCoroutine()
     {
-        agent.speed = 2;
+        agent.speed = -3;
+        AudioManager.instance.PlaySourceAudio(hurtSFX);
         yield return new WaitForSeconds(1);
 
         // Revert speed to normal

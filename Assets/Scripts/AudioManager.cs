@@ -129,6 +129,13 @@ public class AudioManager : MonoBehaviour
         return audioSource;
     }
 
+    public void SetBGM(AudioClipInstance bgm)
+    {
+        bgmSource.clip = bgm.audioClip;
+        bgmSource.volume = bgm.RandomVolume();
+        bgmSource.pitch = bgm.RandomPitch();
+    }
+
     /// <summary>
     /// Use AudioClipInstance as a variable and assign audioClip in inspector. 
     /// <para> Alternatively you can use PlayAudioComponent and use PlayAudio() to use it for events.</para> 

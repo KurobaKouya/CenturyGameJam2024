@@ -5,23 +5,23 @@ public class Globals
     public static float playerMovementSpeed = 10f;
     public static float sprintMovementSpeed = 20f;
     public static float healthRegen = 0f;
-    public static float healthDrainSpeed = 1f;
+    public static float healthDrainSpeed = 5f;
 
     public  static float attackStaminaDrain = 15f;
     public static float sprintStaminaDrain = 5f;
-    public static float staminaRegen = 5f;
+    public static float staminaRegen = 10f;
 
 
     public static float flashlightRegen = 10f;
     public static float flashlightDrain = 5.0f;
-    public static float flashlightDrainOnHit = 20f;
+    public static float flashlightDrainOnHit = 10f;
 
     public static float maxInk = 100;
     public static float inkPerDistance = 0.5f;
 
 
-    public static int monsterHealth = 10;
-    public static int monsterDmg = 20;
+    public static int monsterHealth = 20;
+    public static int monsterDmg = 5;
     public static float monsterSightRange = 10f;
     public static float monsterPatrolRange = 10f;
     public static float maxDistanceFromPlayer = 30f;

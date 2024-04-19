@@ -898,7 +898,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 48}
-  m_SizeDelta: {x: 120, y: 50}
+  m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &725378185
 MonoBehaviour:
@@ -947,14 +947,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1014,7 +1014,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &783284003
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1049,6 +1049,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 783284005}
+  light: {fileID: 0}
 --- !u!114 &783284005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2590,7 +2591,7 @@ RectTransform:
   m_Father: {fileID: 1160535321}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2706,6 +2707,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3244767139026760824, guid: 2b6695801b0aecb4da67efa723c79a8e, type: 3}
+      propertyPath: hurtSFX.bypassLimit
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 141290230875568430, guid: 2b6695801b0aecb4da67efa723c79a8e, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2761,6 +2766,14 @@ PrefabInstance:
     - target: {fileID: 4632038477574320855, guid: 2b6695801b0aecb4da67efa723c79a8e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 21.014973
+      objectReference: {fileID: 0}
+    - target: {fileID: 5276766737861883806, guid: 2b6695801b0aecb4da67efa723c79a8e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5276766737861883806, guid: 2b6695801b0aecb4da67efa723c79a8e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

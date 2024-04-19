@@ -11,6 +11,7 @@ public class MiniMapController : MonoBehaviour, IPointerClickHandler, IPointerMo
     public UnityEvent<Vector3> onClickOnMinimap;
     public UnityEvent<Vector3> onPointerUpMinimap;
     public float distanceUpdate = 10;
+    public AudioClipInstance drawSFX;
 
     public Vector3 prevLocation;
     public void OnPointerMove(PointerEventData eventData)
@@ -18,6 +19,7 @@ public class MiniMapController : MonoBehaviour, IPointerClickHandler, IPointerMo
         if (Input.GetMouseButton(0))
         {
             MinimapToWorld(eventData);
+            AudioManager.instance.PlaySourceAudio(drawSFX);
         }
     }
     public void OnPointerClick(PointerEventData eventData)
