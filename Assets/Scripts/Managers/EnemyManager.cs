@@ -17,7 +17,7 @@ public class EnemyManager : Singleton<EnemyManager>
 
     public void UpdateLoop()
     {
-        if (Input.GetKeyDown(KeyCode.J)) SpawnEnemy();
+        if (GameManager.Instance.currentScene != Globals.SceneIndex.Game) return;
         SpawnEnemies();
 
         foreach (Enemy en in enemyList) 

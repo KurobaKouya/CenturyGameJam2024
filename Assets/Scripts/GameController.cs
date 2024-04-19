@@ -30,7 +30,8 @@ public class GameController : MonoBehaviour
 
 
         // Switch to Menu/Game Scene
-        SceneManager.LoadSceneAsync((int)Globals.SceneIndex.Game, LoadSceneMode.Single);
+        SceneManager.LoadSceneAsync((int)Globals.SceneIndex.MainMenu, LoadSceneMode.Single);
+        GameManager.Instance.currentScene = Globals.SceneIndex.MainMenu;
     }
 
 

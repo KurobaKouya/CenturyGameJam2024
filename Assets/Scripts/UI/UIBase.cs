@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UIBase : MonoBehaviour
 {
-    private CanvasGroup canvasGroup;
+    protected CanvasGroup canvasGroup;
     protected bool isToggled = false;
 
     

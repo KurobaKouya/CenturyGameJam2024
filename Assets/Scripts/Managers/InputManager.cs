@@ -14,6 +14,7 @@ public class InputManager : MonoBehaviour
     {
         if (player) if (playerInputEnabled) UpdatePlayerInput(); else ResetPlayerInput();
         // if (Input.GetKeyDown(KeyCode.I)) UIEvents.Instance.ToggleInventory();
+        if (playerInput.Controls.TogglePause.WasPressedThisFrame()) UIEvents.Instance.TogglePause();
     }
 
 

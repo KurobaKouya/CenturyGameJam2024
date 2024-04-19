@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
+    [HideInInspector] public Globals.SceneIndex currentScene = Globals.SceneIndex.Preload;
     [HideInInspector] public GameData gameData = null;
     [HideInInspector] public Player player { get; private set; }
     [HideInInspector] public bool flashlightToggled = false;
