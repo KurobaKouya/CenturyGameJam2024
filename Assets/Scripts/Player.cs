@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
         //set player light
         GameManager.Instance.gameData.playerFog = new NoFogPosition(transform.position, lightRadius, 0, GameManager.Instance.gameData.playerHealth / Globals.healthDrainSpeed, null, true);
         
-        MinimapToFog.instance.AddNoFog(GameManager.Instance.gameData.playerFog);
+        FindObjectOfType<MinimapToFog>().AddNoFog(GameManager.Instance.gameData.playerFog);
         if (!rb) rb = GetComponent<Rigidbody>();
     }
 
@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
     {
         InputEvents.onToggleSprint -= (bool enable) => isSprinting = enable;
         InputEvents.onPlayerAttack -= Attack;
-        MinimapToFog.instance.RemoveNoFog(GameManager.Instance.gameData.playerFog);
+        FindObjectOfType<MinimapToFog>().RemoveNoFog(GameManager.Instance.gameData.playerFog);
     }
 
 

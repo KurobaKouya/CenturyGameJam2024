@@ -3,7 +3,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 [Serializable]
 public class NoFogPosition
@@ -41,7 +40,6 @@ public class NoFogPosition
 
 public class MinimapToFog : MonoBehaviour
 {
-    public static MinimapToFog instance;   
     [SerializeField] csFogWar fogWar;
     [SerializeField] MiniMapController controller;
     [SerializeField] float startSize = 5;
@@ -54,11 +52,6 @@ public class MinimapToFog : MonoBehaviour
 
     List<NoFogPosition> noFog = new List<NoFogPosition>();
     // Start is called before the first frame update
-    private void Awake()
-    {
-        if (instance == null)
-            instance = this;
-    }
     void Start()
     {
         
