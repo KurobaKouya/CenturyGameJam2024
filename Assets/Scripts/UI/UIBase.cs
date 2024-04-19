@@ -13,6 +13,7 @@ public class UIBase : MonoBehaviour
         if (canvasGroup == null) canvasGroup = GetComponent<CanvasGroup>();
         canvasGroup.alpha = 0f;
         canvasGroup.blocksRaycasts = false;
+        canvasGroup.interactable = false;
     }
 
 
@@ -22,5 +23,6 @@ public class UIBase : MonoBehaviour
         // Time.timeScale = isToggled ? 0f : 1f;
         canvasGroup.alpha = isToggled ? 1f : 0f;
         canvasGroup.blocksRaycasts = isToggled;
+        canvasGroup.interactable = isToggled;
     }
 }

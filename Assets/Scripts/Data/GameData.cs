@@ -4,7 +4,7 @@ using UnityEngine;
 public class GameData
 {
     public int relicsCollected = 0;
-    public int lives = 5;
+    public int lives = 3;
     public float playerHealth = 100f;
     public float flashlightPower = 100f;
     public Globals.ItemIndex itemInHand = Globals.ItemIndex.None;

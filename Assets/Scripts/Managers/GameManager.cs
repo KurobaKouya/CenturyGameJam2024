@@ -91,8 +91,10 @@ public class GameManager : Singleton<GameManager>
         GameEvents.Instance.DropRelic();
 
         yield return null;
+        GameEvents.Instance.PlayerDeath();
 
-        // Set player position to spawn        
+        // Set player position to spawn
+        player.transform.position = new(0, transform.position.y, 0);
     }
 
 
