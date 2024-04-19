@@ -10,4 +10,8 @@ public class UIEvents : Singleton<UIEvents>
 
     public static event Action onToggleMap = delegate { };
     public void ToggleMap() => onToggleMap?.Invoke();
+
+
+    public static event Action onTogglePause = delegate { };
+    public void TogglePause() => onTogglePause?.Invoke();
 }

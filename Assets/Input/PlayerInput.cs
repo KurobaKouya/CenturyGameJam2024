@@ -62,6 +62,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""TogglePause"",
+                    ""type"": ""Button"",
+                    ""id"": ""e3f3706e-3cfa-4c69-8cbb-3c3b9a4913fb"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -207,6 +216,17 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""ToggleMap"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d22b40b1-ab89-49f2-90bf-5af2c61b414c"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TogglePause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -267,6 +287,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_Controls_Sprint = m_Controls.FindAction("Sprint", throwIfNotFound: true);
         m_Controls_Attack = m_Controls.FindAction("Attack", throwIfNotFound: true);
         m_Controls_ToggleMap = m_Controls.FindAction("ToggleMap", throwIfNotFound: true);
+        m_Controls_TogglePause = m_Controls.FindAction("TogglePause", throwIfNotFound: true);
         // Interactions
         m_Interactions = asset.FindActionMap("Interactions", throwIfNotFound: true);
         m_Interactions_Interact = m_Interactions.FindAction("Interact", throwIfNotFound: true);
@@ -336,6 +357,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Controls_Sprint;
     private readonly InputAction m_Controls_Attack;
     private readonly InputAction m_Controls_ToggleMap;
+    private readonly InputAction m_Controls_TogglePause;
     public struct ControlsActions
     {
         private @PlayerInput m_Wrapper;
@@ -344,6 +366,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @Sprint => m_Wrapper.m_Controls_Sprint;
         public InputAction @Attack => m_Wrapper.m_Controls_Attack;
         public InputAction @ToggleMap => m_Wrapper.m_Controls_ToggleMap;
+        public InputAction @TogglePause => m_Wrapper.m_Controls_TogglePause;
         public InputActionMap Get() { return m_Wrapper.m_Controls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -365,6 +388,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @ToggleMap.started += instance.OnToggleMap;
             @ToggleMap.performed += instance.OnToggleMap;
             @ToggleMap.canceled += instance.OnToggleMap;
+            @TogglePause.started += instance.OnTogglePause;
+            @TogglePause.performed += instance.OnTogglePause;
+            @TogglePause.canceled += instance.OnTogglePause;
         }
 
         private void UnregisterCallbacks(IControlsActions instance)
@@ -381,6 +407,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @ToggleMap.started -= instance.OnToggleMap;
             @ToggleMap.performed -= instance.OnToggleMap;
             @ToggleMap.canceled -= instance.OnToggleMap;
+            @TogglePause.started -= instance.OnTogglePause;
+            @TogglePause.performed -= instance.OnTogglePause;
+            @TogglePause.canceled -= instance.OnTogglePause;
         }
 
         public void RemoveCallbacks(IControlsActions instance)
@@ -458,6 +487,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnSprint(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
         void OnToggleMap(InputAction.CallbackContext context);
+        void OnTogglePause(InputAction.CallbackContext context);
     }
     public interface IInteractionsActions
     {
